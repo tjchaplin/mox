@@ -39,7 +39,7 @@ describe("Given we are generating documentation markdown", function() {
 
 				var options = {
 					outputFile : "./tests/tmp/"+testFixtureFileName+".md"
-				}
+				};
 
 				mox.run(source,options,function(){
 					var actual = fs.readFileSync(options.outputFile, 'ascii');
@@ -70,7 +70,7 @@ describe("Given we are generating documentation markdown", function() {
 								var options = {
 									outputFile : "./tests/tmp/templates/"+templateName+"/"+testFixtureFileName+".md",
 									template : templateName
-								}
+								};
 
 								mox.run(source,options,function(){
 									var actual = fs.readFileSync(options.outputFile, 'ascii');
@@ -94,7 +94,7 @@ describe("Given we are generating documentation markdown", function() {
 
 			var options = {
 				outputFile : "./tests/tmp/allSources.md"
-			}
+			};
 
 			mox.run(source,options,function(){
 				var actual = fs.readFileSync(options.outputFile, 'ascii');
@@ -119,7 +119,7 @@ describe("Given we are generating documentation markdown", function() {
 
 				var options = {
 					htmlOutputFile : "./tests/tmp/"+testFixtureFileName+".html"
-				}
+				};
 
 				mox.run(source,options,function(){
 					var actual = fs.readFileSync(options.htmlOutputFile, 'ascii');
@@ -147,7 +147,7 @@ describe("Given we are generating documentation markdown", function() {
 
 				var options = {
 					moxJsonFile : "./tests/tmp/"+testFixtureFileName+".json"
-				}
+				};
 
 				mox.run(source,options,function(){
 					var actual = fs.readFileSync(options.moxJsonFile, 'ascii');
