@@ -16,15 +16,17 @@
  * @example
  */
 function SomeClass(){
+	/** Some property Thing */
+	var aProperty = "alsdkfjaslfdj";
 
 	/**
 	 * SomeClassFunction
- 	 *
- 	 * Example:
- 	 *
- 	 * ```javascript
- 	 * SomeClass.someClassMethod(x);
- 	 * ```
+	 *
+	 * Example:
+	 *
+	 * ```javascript
+	 * SomeClass.someClassMethod(x);
+	 * ```
 	 * @category SomeClassCategory
 	 * @method someClassMethod
 	 * @param {Function|String} methodParam some method param
@@ -58,9 +60,9 @@ function SomeClass2(){
 
 	/**
 	 * SomeClass2Function
- 	 *
- 	 * Example:
- 	 * 
+	 *
+	 * Example:
+	 * 
 	 * ```javascript
 	 * SomeClass2.someClassMethod(x);
 	 * ```

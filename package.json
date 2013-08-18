@@ -1,7 +1,7 @@
 {
   "name": "mox",
   "description": "A documentation to markdown creator",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "author": "Tim Chaplin <tim.chaplin@ticktockdevelopment.com>",
   "repository": {
     "type": "git",
@@ -10,14 +10,18 @@
   "homepage": "https://github.com/tjchaplin/mox.git",
   "dependencies": {
     "markdown": "~0.5.0",
-    "yaenumerable": "~1.0.0"
+    "yaenumerable": "~1.0.0",
+    "fs.extra": "~1.2.1",
+    "dox": "~0.4.4",
+    "jade": "~0.34.1",
+    "html-md": "~3.0.1"    
   },
   "devDependencies": {
     "mocha": "~1.12.0",
-    "should": "~1.2.2",
-    "dox": "~0.4.4",
-    "jade": "~0.34.1",
-    "html-md": "~3.0.1"
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.4.3",
+    "grunt-contrib-watch": "~0.4.0",
+    "grunt-release": "~0.3.3"
   },
   "browserDependencies": {},
   "keywords": [],

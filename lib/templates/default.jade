@@ -1,0 +1,54 @@
+doctype 5
+html
+	body
+		h2 Methods
+		ul
+			each comment in mox
+				if comment.type === 'method' || comment.type === 'function'
+					li
+						a(href="##{comment.name.toLowerCase()}")= comment.name
+		h2 Declarations
+		ul
+			each comment in mox
+				if comment.type === 'declaration'
+					li
+						a(href="##{comment.name.toLowerCase()}")= comment.name
+		h2 Methods
+		each comment in mox
+			if comment.type === 'method' || comment.type === 'function'
+				h3= comment.name
+				p!= comment.description.body
+				h4 Arguments
+				ol
+					each param in comment.params
+						li= param.name
+							span  (
+							each type, index in param.types
+								if index > 0
+									span  | 
+									span= type
+								else
+									span= type
+							span )
+							span  - 
+							span=  param.description
+				#comment.return
+					if comment.return
+						h4 Returns
+						br
+						br
+						span  (
+						each type, index in comment.return.types
+								if index > 0
+									span  | 
+									span= type
+								else
+									span= type
+						span )
+						span  - 
+						span= comment.return.description
+		h2 Declarations
+		each comment in mox						
+			if comment.type === 'declaration'
+				h3= comment.name
+				p!= comment.description.full
