@@ -30,20 +30,26 @@ describe("Given we are generating documentation markdown", function() {
 
 	describe("When using the default template", function() {
 
-		it("Then should be able to generate the expected markdown for all source files", function() {
+		it("Then should be able to generate the expected markdown for all source files", function(done) {
 			
 			forEachTestFixture(function(testFixtureFileName){
 
-				var dest = "./tests/tmp/"+testFixtureFileName+".md";
 				var source = "./tests/fixtures/"+testFixtureFileName+".js";
 				var expectedFile = "./tests/expected/"+testFixtureFileName+".md";
 
-				mox.run(source,dest);
+				var options = {
+					outputFile : "./tests/tmp/"+testFixtureFileName+".md"
+				}
 
-				var actual = fs.readFileSync(dest, 'ascii');
-				var expected = fs.readFileSync(expectedFile, 'ascii');
+				mox.run(source,options,function(){
+					var actual = fs.readFileSync(options.outputFile, 'ascii');
+					var expected = fs.readFileSync(expectedFile, 'ascii');
 
-				assert(expected === actual,"Expected File("+expectedFile+")"+" Doesn't match result file("+dest+") for("+source+")");
+					assert(expected === actual,"Expected File("+expectedFile+")"+" Doesn't match result file("+options.outputFile+") for("+source+")");					
+					done();					
+				});
+
+
 			});
 
 		});
@@ -52,26 +58,110 @@ describe("Given we are generating documentation markdown", function() {
 
 	describe("When using the defined templates", function() {
 
-		it("Then should be able to generate the expected markdown for all source files", function() {
+		forEachTestFixture(function(testFixtureFileName){
+
+				forEachNonDefaultTemplate(function(templateName){
+
+					it("Then should be able to generate the expected markdown for "+templateName+" template", function(done) {
+
+								var source = "./tests/fixtures/"+testFixtureFileName+".js";
+								var expectedFile = "./tests/expected/templates/"+templateName+"/"+testFixtureFileName+".md";
+
+								var options = {
+									outputFile : "./tests/tmp/templates/"+templateName+"/"+testFixtureFileName+".md",
+									template : templateName
+								}
+
+								mox.run(source,options,function(){
+									var actual = fs.readFileSync(options.outputFile, 'ascii');
+									var expected = fs.readFileSync(expectedFile, 'ascii');
+
+									assert(expected === actual,"Expected File("+expectedFile+")"+" Doesn't match result file("+options.outputFile+") for("+source+")");
+									done();
+								});
+					});
+				});
+
+			});
+	});
+
+	describe("When using the default template", function() {
+
+		it("Then should be able to generate the expected markdown for a source directory", function(done) {
+			
+			var source = "./tests/fixtures/";
+			var expectedFile = "./tests/expected/allSources.md";
+
+			var options = {
+				outputFile : "./tests/tmp/allSources.md"
+			}
+
+			mox.run(source,options,function(){
+				var actual = fs.readFileSync(options.outputFile, 'ascii');
+				var expected = fs.readFileSync(expectedFile, 'ascii');
+
+				assert(expected === actual,"Expected File("+expectedFile+")"+" Doesn't match result file("+options.outputFile+") for("+source+")");					
+				done();					
+			});
+
+		});
+
+	});
+
+	describe("When using the html output file option", function() {
+
+		it("Then should be able to generate the expected html for all source files", function(done) {
 			
 			forEachTestFixture(function(testFixtureFileName){
 
-				forEachNonDefaultTemplate(function(templateName){
-					var dest = "./tests/tmp/templates/"+templateName+"/"+testFixtureFileName+".md";
-					var source = "./tests/fixtures/"+testFixtureFileName+".js";
-					var expectedFile = "./tests/expected/templates/"+templateName+"/"+testFixtureFileName+".md";
+				var source = "./tests/fixtures/"+testFixtureFileName+".js";
+				var expectedFile = "./tests/expected/"+testFixtureFileName+".html";
 
-					mox.run(source,dest,templateName);
+				var options = {
+					htmlOutputFile : "./tests/tmp/"+testFixtureFileName+".html"
+				}
 
-					var actual = fs.readFileSync(dest, 'ascii');
+				mox.run(source,options,function(){
+					var actual = fs.readFileSync(options.htmlOutputFile, 'ascii');
 					var expected = fs.readFileSync(expectedFile, 'ascii');
 
-					assert(expected === actual,"Expected File("+expectedFile+")"+" Doesn't match result file("+dest+") for("+source+")");
+					assert(expected === actual,"Expected File("+expectedFile+")"+" Doesn't match result file("+options.outputFile+") for("+source+")");					
+					done();					
 				});
+
 
 			});
 
 		});
+
+	});
+
+	describe("When using the mox json output file option", function() {
+
+		it("Then should be able to generate the expected json for all source files", function(done) {
+			
+			forEachTestFixture(function(testFixtureFileName){
+
+				var source = "./tests/fixtures/"+testFixtureFileName+".js";
+				var expectedFile = "./tests/expected/"+testFixtureFileName+".json";
+
+				var options = {
+					moxJsonFile : "./tests/tmp/"+testFixtureFileName+".json"
+				}
+
+				mox.run(source,options,function(){
+					var actual = fs.readFileSync(options.moxJsonFile, 'ascii');
+					var expected = fs.readFileSync(expectedFile, 'ascii');
+
+					assert(expected === actual,"Expected File("+expectedFile+")"+" Doesn't match result file("+options.outputFile+") for("+source+")");					
+					done();					
+				});
+
+
+			});
+
+		});
+
 	});
 
 });

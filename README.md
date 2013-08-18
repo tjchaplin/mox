@@ -39,7 +39,42 @@ var source2 = "./source2.js";
 var markdownDocumentationFile = "./someOutputfile.md";
 
 mox.run([source1,source2], //->source files to generate documentation for
-		markdownDocumentationFile); //->output markdown file
+		function(markdownDocument){
+			//->markdownDocument equal markdown contents
+		}); 
+=> //markdown documentation file will be created to output directory
+```
+
+### Options
+
+All below options are available to mox
+
+```javascript
+var allMoxOptions = {
+	
+	moxJsonFile : "mox object json output file",
+
+	htmlOutputFile : "htmlOutpuFile" //-> html generated output file path,
+
+	outputFile : "./someOutputFile.md", //-> mark down documentation output file,
+
+	template : "moxTemplateName | ./someCustomTemplate.jade", //-> mox template name or custom template to use
+}
+```
+
+### Default Template with outputfile
+
+```javascript
+var mox = require("../lib/mox");
+
+var source1 = "./source1.js";
+var source2 = "./source2.js";
+var options = {
+	outputFile :"./someOutputfile.md" //->output markdown file
+};
+
+mox.run([source1,source2], //->source files to generate documentation for
+		options); 
 => //markdown documentation file will be created to output directory
 ```
 
@@ -50,11 +85,14 @@ var mox = require("../lib/mox");
 
 var source1 = "./source1.js";
 var source2 = "./source2.js";
-var markdownDocumentationFile = "./someOutputfile.md";
+
+var options = {
+	outputFile :"./someOutputfile.md", //->output markdown file
+	template:"category" //->specfies to use the category based template.  Table of contents will be based on **@categoy** tag
+};
 
 mox.run([source1,source2], //->source files to generate documentation for
-		markdownDocumentationFile, //->output markdown file
-		'category'); //->specfies to use the category based template.  Table of contents will be based on **@categoy** tag
+		options); 
 => //markdown documentation file will be created to output directory
 ```
 
@@ -65,11 +103,14 @@ var mox = require("../lib/mox");
 
 var source1 = "./source1.js";
 var source2 = "./source2.js";
-var markdownDocumentationFile = "./someOutputfile.md";
+
+var options = {
+	outputFile :"./someOutputfile.md", //->output markdown file
+	template:"file" //->specfies to use the file based template.  Table of contents will be based on filenames of the sources
+};
 
 mox.run([source1,source2], //->source files to generate documentation for
-		markdownDocumentationFile, //->output markdown file
-		'file'); //->specfies to use the file based template.  Table of contents will be based on filenames of the sources
+		options); 
 => //markdown documentation file will be created to output directory
 ```
 
@@ -100,13 +141,37 @@ var mox = require("../lib/mox");
 
 var source1 = "./source1.js";
 var source2 = "./source2.js";
-var markdownDocumentationFile = "./someOutputfile.md";
+
+var options = {
+	outputFile :"./someOutputfile.md", //->output markdown file
+	template:'./customTemplate.jade' //->specfies path to custom template
+};
 
 var customTemplate = './customTemplate.jade';
 
 mox.run([source1,source2], //->source files to generate documentation for
-		markdownDocumentationFile, //->output markdown file
-		customTemplate); //->specfies path to custom template
+		options); //->specfies path to custom template
+=> //markdown documentation file will be created to output directory
+```
+
+### Asynchronus results
+
+Markdown documentation will be returned if a callback is specfied as the last argument
+
+```javascript
+var mox = require("../lib/mox");
+
+var source1 = "./source1.js";
+var source2 = "./source2.js";
+
+var options = {
+	outputFile :"./someOutputfile.md", //->output markdown file
+	template:'category' //-> Using category template
+};
+
+mox.run([source1,source2], //->source files to generate documentation for
+		options, //-> Mox options
+		function(markdownDocumentation){}); //->markdownDocumentation equals the markdown file contents
 => //markdown documentation file will be created to output directory
 ```
 
@@ -267,3 +332,14 @@ Generates mox object:
    }
 ]
 ```
+
+##Credits/Other Frameworks
+
+Thanks to the following frameworks used as dependcies for the project
+* [dox](https://github.com/visionmedia/dox) - For getting jsdoc style documention object
+* [Jade](http://jade-lang.com/ )- For templating
+* [html.md](http://neocotic.com/html.md/) - For html to markdown
+
+Other markdown javascript documentation projects
+* [Markdox](http://cbou.github.io/markdox/)
+* [jsdox](http://jsdox.org/)

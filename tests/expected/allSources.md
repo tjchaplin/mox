@@ -1,14 +1,15 @@
-## SomeClassCategory
+## Methods
 
 * [SomeClass][0]
 * [someClassMethod][1]
-
-## SomeClassCategory2
-
 * [SomeClass2][2]
 * [someClassMethod2][3]
 
-## SomeClassCategory
+## Declarations
+
+* [aProperty][4]
+
+## Methods
 
 ### SomeClass
 
@@ -35,8 +36,6 @@ Example:
 #### Returns  
   
 (Function | String) - A return value
-
-## SomeClassCategory2
 
 ### SomeClass2
 
@@ -65,8 +64,16 @@ Example:
   
 (String) - A return value
 
+## Declarations
+
+### aProperty
+
+Some property Thing
+
+
 
 [0]: #someclass
 [1]: #someclassmethod
 [2]: #someclass2
 [3]: #someclassmethod2
+[4]: #aproperty

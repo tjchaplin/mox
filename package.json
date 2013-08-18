@@ -14,7 +14,8 @@
     "fs.extra": "~1.2.1",
     "dox": "~0.4.4",
     "jade": "~0.34.1",
-    "html-md": "~3.0.1"
+    "html-md": "~3.0.1",
+    "node-dir": "~0.1.2"
   },
   "devDependencies": {
     "mocha": "~1.12.0",
@@ -28,6 +29,15 @@
   "engines": {
     "node": ">= 0.2.0"
   },
+  "keywords": [
+    "mox",
+    "dox",
+    "markdown",
+    "md",
+    "documentation",
+    "generator",
+    "template"
+  ],
   "main": "./index.js",
   "directories": {
     "test": "tests",
