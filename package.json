@@ -1,20 +1,23 @@
 {
-  "name": "code2Markdown",
+  "name": "mox",
   "description": "A documentation to markdown creator",
   "version": "0.0.1",
   "author": "Tim Chaplin <tim.chaplin@ticktockdevelopment.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/scarletjs/scarlet.git"
+    "url": "https://github.com/tjchaplin/mox.git"
   },
-  "homepage": "https://github.com/scarletjs/scarlet.git",
-  "dependencies": {},
+  "homepage": "https://github.com/tjchaplin/mox.git",
+  "dependencies": {
+    "markdown": "~0.5.0",
+    "yaenumerable": "~1.0.0"
+  },
   "devDependencies": {
-    "mocha": "*",
-    "should": "*",
-    "dox":"~0.4.4",
-    "jade":"~0.34.1",
-    "html-md": "~3.0.0"
+    "mocha": "~1.12.0",
+    "should": "~1.2.2",
+    "dox": "~0.4.4",
+    "jade": "~0.34.1",
+    "html-md": "~3.0.1"
   },
   "browserDependencies": {},
   "keywords": [],

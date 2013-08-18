@@ -1,0 +1,43 @@
+doctype 5
+html
+	body
+		each category in categories
+			h2= category.tag
+			ul
+				each comment in category.moxComments
+					li
+						a(href="##{comment.name.toLowerCase()}")= comment.name
+		each category in categories
+			h2= category.tag
+			each comment in category.moxComments
+				h3= comment.name
+				p!= comment.description.body
+				h4 Arguments
+				ol
+					each param in comment.params
+						li= param.name
+							span  (
+							each type, index in param.types
+								if index > 0
+									span  | 
+									span= type
+								else
+									span= type
+							span )
+							span  - 
+							span=  param.description
+				#comment.return
+					if comment.return
+						h4 Returns
+						br
+						br
+						span  (
+						each type, index in comment.return.types
+								if index > 0
+									span  | 
+									span= type
+								else
+									span= type
+						span )
+						span  - 
+						span= comment.return.description
