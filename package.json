@@ -1,7 +1,7 @@
 {
   "name": "mox",
   "description": "A documentation to markdown creator",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Tim Chaplin <tim.chaplin@ticktockdevelopment.com>",
   "repository": {
     "type": "git",
@@ -25,10 +25,6 @@
     "grunt-release": "~0.3.3"
   },
   "browserDependencies": {},
-  "keywords": [],
-  "engines": {
-    "node": ">= 0.2.0"
-  },
   "keywords": [
     "mox",
     "dox",
@@ -38,6 +34,9 @@
     "generator",
     "template"
   ],
+  "engines": {
+    "node": ">= 0.2.0"
+  },
   "main": "./index.js",
   "directories": {
     "test": "tests",
