@@ -118,14 +118,14 @@ describe("Given we are generating documentation markdown", function() {
 				var expectedFile = "./tests/expected/"+testFixtureFileName+".html";
 
 				var options = {
-					htmlOutputFile : "./tests/tmp/"+testFixtureFileName+".html"
+					htmlFile : "./tests/tmp/"+testFixtureFileName+".html"
 				};
 
 				mox.run(source,options,function(){
-					var actual = fs.readFileSync(options.htmlOutputFile, 'ascii');
+					var actual = fs.readFileSync(options.htmlFile, 'ascii');
 					var expected = fs.readFileSync(expectedFile, 'ascii');
 
-					assert(expected === actual,"Expected File("+expectedFile+")"+" Doesn't match result file("+options.outputFile+") for("+source+")");					
+					assert(expected === actual,"Expected File("+expectedFile+")"+" Doesn't match result file("+options.htmlFile+") for("+source+")");					
 					done();					
 				});
 
@@ -146,14 +146,14 @@ describe("Given we are generating documentation markdown", function() {
 				var expectedFile = "./tests/expected/"+testFixtureFileName+".json";
 
 				var options = {
-					moxJsonFile : "./tests/tmp/"+testFixtureFileName+".json"
+					moxFile : "./tests/tmp/"+testFixtureFileName+".json"
 				};
 
 				mox.run(source,options,function(){
-					var actual = fs.readFileSync(options.moxJsonFile, 'ascii');
+					var actual = fs.readFileSync(options.moxFile, 'ascii');
 					var expected = fs.readFileSync(expectedFile, 'ascii');
 
-					assert(expected === actual,"Expected File("+expectedFile+")"+" Doesn't match result file("+options.outputFile+") for("+source+")");					
+					assert(expected === actual,"Expected File("+expectedFile+")"+" Doesn't match result file("+options.moxFile+") for("+source+")");					
 					done();					
 				});
 

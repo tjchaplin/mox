@@ -52,9 +52,9 @@ All below options are available to mox
 ```javascript
 var allMoxOptions = {
 	
-	moxJsonFile : "mox object json output file",
+	moxFile : "mox object json output file",
 
-	htmlOutputFile : "htmlOutpuFile" //-> html generated output file path,
+	htmlFile : "htmlFile" //-> html generated output file path,
 
 	outputFile : "./someOutputFile.md", //-> mark down documentation output file,
 
