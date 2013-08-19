@@ -31,7 +31,7 @@ npm install mox
 
 See the examples directory for ouput using the predefined mox templates:
 
-['examples'](https://github.com/tjchaplin/mox/tree/master/doc/)
+[`examples`](https://github.com/tjchaplin/mox/tree/master/doc/)
 
 ## How to use
 
