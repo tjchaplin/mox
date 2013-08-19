@@ -1,18 +1,20 @@
-## SomeClassCategory
+## `SomeClassCategory`
 
-* [SomeClass][0]
-* [aProperty][1]
-* [aPropertyWithType][2]
-* [someClassMethod][3]
+* [`SomeClass`][0]
+* [`aProperty`][1]
+* [`aPropertyWithType`][2]
+* [`someClassMethod`][3]
 
-## SomeClassCategory2
+## `SomeClassCategory2`
 
-* [SomeClass2][4]
-* [someClassMethod2][5]
+* [`SomeClass2`][4]
+* [`someClassMethod2`][5]
 
-## SomeClassCategory
+## `SomeClassCategory`
 
-### SomeClass
+### `SomeClass`
+
+[\#][0] [Ⓣ][6]
 
 Example:
 
@@ -21,21 +23,33 @@ Example:
 
 #### Arguments
 
-1. param (String) - a parameter
+1. `param` _(String)_ - a parameter
 
-### aProperty
+---
+
+### `aProperty`
+
+[\#][1] [Ⓣ][6]
 
 Some property description
 
-### aPropertyWithType
+---
+
+### `aPropertyWithType`
+
+[\#][2] [Ⓣ][6]
 
 #### Types
 
-  * String
+  * _String_
 
 Some property with type description
 
-### someClassMethod
+---
+
+### `someClassMethod`
+
+[\#][3] [Ⓣ][6]
 
 Example:
 
@@ -44,15 +58,19 @@ Example:
 
 #### Arguments
 
-1. methodParam (Function | String) - some method param
+1. `methodParam` _(Function | String)_ - some method param
 
 #### Returns  
   
-(Function | String) - A return value
+_(Function | String)_ - A return value
 
-## SomeClassCategory2
+---
 
-### SomeClass2
+## `SomeClassCategory2`
+
+### `SomeClass2`
+
+[\#][4] [Ⓣ][7]
 
 Example:
 
@@ -61,9 +79,13 @@ Example:
 
 #### Arguments
 
-1. param (String) - a parameter
+1. `param` _(String)_ - a parameter
 
-### someClassMethod2
+---
+
+### `someClassMethod2`
+
+[\#][5] [Ⓣ][7]
 
 Example:
 
@@ -72,12 +94,15 @@ Example:
 
 #### Arguments
 
-1. methodParam (Function) - some method param
-2. methodParam2 (Function) - some method param
+1. `methodParam` _(Function)_ - some method param
+2. `methodParam2` _(Function)_ - some method param
 
 #### Returns  
   
-(String) - A return value
+_(String)_ - A return value
+
+---
+
 
 
 [0]: #someclass
@@ -86,3 +111,5 @@ Example:
 [3]: #someclassmethod
 [4]: #someclass2
 [5]: #someclassmethod2
+[6]: #someclasscategory
+[7]: #someclasscategory2

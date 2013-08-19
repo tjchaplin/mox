@@ -1,15 +1,17 @@
-## ./tests/fixtures/functionSomeClass.js
+## `./tests/fixtures/functionSomeClass.js`
 
-* [SomeClass][0]
-* [aProperty][1]
-* [aPropertyWithType][2]
-* [someClassMethod][3]
-* [SomeClass2][4]
-* [someClassMethod2][5]
+* [`SomeClass`][0]
+* [`aProperty`][1]
+* [`aPropertyWithType`][2]
+* [`someClassMethod`][3]
+* [`SomeClass2`][4]
+* [`someClassMethod2`][5]
 
-## ./tests/fixtures/functionSomeClass.js
+## `./tests/fixtures/functionSomeClass.js`
 
-## SomeClass
+### `SomeClass`
+
+[\#][0] [Ⓣ][6]
 
 Example:
 
@@ -18,21 +20,33 @@ Example:
 
 #### Arguments
 
-1. param (String) - a parameter
+1. `param` _(String) - a parameter_
 
-## aProperty
+---
+
+### `aProperty`
+
+[\#][1] [Ⓣ][6]
 
 Some property description
 
-## aPropertyWithType
+---
+
+### `aPropertyWithType`
+
+[\#][2] [Ⓣ][6]
 
 #### Types
 
-  * String
+  * _String_
 
 Some property with type description
 
-## someClassMethod
+---
+
+### `someClassMethod`
+
+[\#][3] [Ⓣ][6]
 
 Example:
 
@@ -41,13 +55,17 @@ Example:
 
 #### Arguments
 
-1. methodParam (Function | String) - some method param
+1. `methodParam` _(Function | String) - some method param_
 
 #### Returns  
   
-(Function | String) - A return value
+_(Function | String)_ - A return value
 
-## SomeClass2
+---
+
+### `SomeClass2`
+
+[\#][4] [Ⓣ][6]
 
 Example:
 
@@ -56,9 +74,13 @@ Example:
 
 #### Arguments
 
-1. param (String) - a parameter
+1. `param` _(String) - a parameter_
 
-## someClassMethod2
+---
+
+### `someClassMethod2`
+
+[\#][5] [Ⓣ][6]
 
 Example:
 
@@ -67,12 +89,15 @@ Example:
 
 #### Arguments
 
-1. methodParam (Function) - some method param
-2. methodParam2 (Function) - some method param
+1. `methodParam` _(Function) - some method param_
+2. `methodParam2` _(Function) - some method param_
 
 #### Returns  
   
-(String) - A return value
+_(String)_ - A return value
+
+---
+
 
 
 [0]: #someclass
@@ -81,3 +106,4 @@ Example:
 [3]: #someclassmethod
 [4]: #someclass2
 [5]: #someclassmethod2
+[6]: #./tests/fixtures/functionsomeclass.js

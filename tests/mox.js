@@ -71,6 +71,7 @@ describe("Given we are generating documentation markdown", function() {
 
 								var options = {
 									outputFile : "./tests/tmp/templates/"+templateName+"/"+testFixtureFileName+".md",
+									htmlFile : "./tests/tmp/html/templates/"+templateName+"/"+testFixtureFileName+".html",
 									template : templateName
 								};
 

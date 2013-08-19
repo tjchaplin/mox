@@ -7,20 +7,33 @@ html
 					span  - 
 					span= version
 		each category in categories
-			h2= category.tag
+			h2
+				code= category.tag
 			ul
 				each comment in category.moxComments
 					li
-						a(href="##{comment.name.toLowerCase()}")= comment.name
+						a(href="##{comment.name.toLowerCase()}")
+							code= comment.name
 		each category in categories
-			h2= category.tag
+			h2
+				code= category.tag
 			each comment in category.moxComments
-				h3= comment.name
+				h3
+					code= comment.name
+				p
+					//Current comment
+					a(href='##{comment.name.toLowerCase()}') #
+					span  
+
+					//Category table of  contents
+					a(href="##{category.tag.toLowerCase()}")  &#x24C9;
+
 				if comment.type.types
 					h4 Types
 					ul
 					each type, index in comment.type.types
-						li= type
+						li
+							em= type
 				if comment.description.body
 					p!= comment.description.body
 				else
@@ -30,29 +43,34 @@ html
 						h4 Arguments
 						ol
 							each param in comment.params
-								li= param.name
-									span  (
-									each type, index in param.types
-										if index > 0
-											span  | 
-											span= type
-										else
-											span= type
-									span )
-									span  - 
+								li
+									code= param.name 
+									span  
+									em 
+										span (
+										each type, index in param.types
+											if index > 0
+												span  | 
+												span= type
+											else
+												span= type
+										span )
+									span   - 
 									span=  param.description
 				#comment.return
 					if comment.return
 						h4 Returns
 						br
 						br
-						span  (
-						each type, index in comment.return.types
-								if index > 0
-									span  | 
-									span= type
-								else
-									span= type
-						span )
+						em
+							span  (
+							each type, index in comment.return.types
+									if index > 0
+										span  | 
+										span= type
+									else
+										span= type
+							span )
 						span  - 
 						span= comment.return.description
+				hr

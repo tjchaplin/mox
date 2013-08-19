@@ -6,63 +6,92 @@ html
 				if version
 					span  - 
 					span= version
-		h2 Methods
+		h2 
+			code Methods
 		ul
 			each comment in mox
 				if comment.type === 'method' || comment.type === 'function'
 					li
-						a(href="##{comment.name.toLowerCase()}")= comment.name
-		h2 Declarations
+						a(href="##{comment.name.toLowerCase()}")
+							code= comment.name
+		h2 
+			code Declarations
 		ul
 			each comment in mox
 				if comment.type === 'declaration'
 					li
-						a(href="##{comment.name.toLowerCase()}")= comment.name
-		h2 Methods
+						a(href="##{comment.name.toLowerCase()}")
+							code= comment.name
+		h2 
+			code Methods
 		each comment in mox
 			if comment.type === 'method' || comment.type === 'function'
-				h3= comment.name
+				h3
+					code= comment.name
+				p
+					//Current comment
+					a(href='##{comment.name.toLowerCase()}') #
+					span  
+
+					//file table of  contents
+					a(href="#methods")  &#x24C9;
+
 				p!= comment.description.body
 				#comment.params
 					if comment.params.length > 0 
 						h4 Arguments
 						ol
 							each param in comment.params
-								li= param.name
-									span  (
-									each type, index in param.types
-										if index > 0
-											span  | 
-											span= type
-										else
-											span= type
-									span )
+								li
+									code= param.name
+									span  
+									em 
+										span  (
+										each type, index in param.types
+											if index > 0
+												span  | 
+												span= type
+											else
+												span= type
+										span )
 									span  - 
 									span=  param.description
 				#comment.return
 					if comment.return
 						h4 Returns
 						br
-						br
-						span  (
-						each type, index in comment.return.types
-								if index > 0
-									span  | 
-									span= type
-								else
-									span= type
-						span )
+						br	
+						em 
+							span  (
+							each type, index in comment.return.types
+									if index > 0
+										span  | 
+										span= type
+									else
+										span= type
+							span )
 						span  - 
 						span= comment.return.description
-		h2 Declarations
+				hr
+		h2 
+			code Declarations
 		each comment in mox						
 			if comment.type !== 'method' && comment.type !== 'function'
 				h3= comment.name
+				p
+					//Current comment
+					a(href='##{comment.name.toLowerCase()}') #
+					span  
+
+					//file table of  contents
+					a(href="#declarations")  &#x24C9;
 				p 
 					if comment.type.types
 						h4 Types
 						ul
 						each type, index in comment.type.types
-							li= type
+							li
+								em= type
 					span!= comment.description.full
+				hr
 
