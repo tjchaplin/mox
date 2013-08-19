@@ -38,6 +38,8 @@ describe("Given we are generating documentation markdown", function() {
 				var expectedFile = "./tests/expected/"+testFixtureFileName+".md";
 
 				var options = {
+					name : "PackageName",
+					version : "v0.0.1",
 					outputFile : "./tests/tmp/"+testFixtureFileName+".md"
 				};
 

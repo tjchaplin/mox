@@ -1,1 +1,701 @@
-{"comments":[{"tags":[{"type":"author","string":"Tim Chaplin"},{"type":"category","string":"SomeClassCategory"},{"type":"class","string":"SomeClass"},{"type":"constructor","string":""},{"type":"param","types":["String"],"name":"param","description":"a parameter"},{"type":"optional","string":""},{"type":"example","string":""}],"description":{"full":"<p>A Class description</p>\n\n<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass.someClassMethod(x);\n</pre></div>","summary":"<p>A Class description</p>","body":"<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass.someClassMethod(x);\n</pre></div>"},"isPrivate":false,"ignore":false,"code":"function SomeClass(){","ctx":{"type":"function","name":"SomeClass","string":"SomeClass()"},"fileName":"./tests/fixtures/functionSomeClass.js"},{"tags":[],"description":{"full":"<p>Some property Thing</p>","summary":"<p>Some property Thing</p>","body":""},"ignore":false,"code":"var aProperty = \"alsdkfjaslfdj\";","ctx":{"type":"declaration","name":"aProperty","value":"\"alsdkfjaslfdj\"","string":"aProperty"},"fileName":"./tests/fixtures/functionSomeClass.js"},{"tags":[{"type":"category","string":"SomeClassCategory"},{"type":"method","string":"someClassMethod"},{"type":"param","types":["Function","String"],"name":"methodParam","description":"some method param"},{"type":"return","types":["Function","String"],"description":"A return value"},{"type":"chainable","string":""}],"description":{"full":"<p>SomeClassFunction</p>\n\n<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass.someClassMethod(x);\n</pre></div>","summary":"<p>SomeClassFunction</p>","body":"<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass.someClassMethod(x);\n</pre></div>"},"isPrivate":false,"ignore":false,"code":"self.someClassMethod = function(methodParam) {\n\t\tself.lib.Plugins.loadPlugin(self, pluginPath);\n\t\treturn self;\n\t};\n}","ctx":{"type":"method","receiver":"self","name":"someClassMethod","string":"self.someClassMethod()"},"fileName":"./tests/fixtures/functionSomeClass.js"},{"tags":[{"type":"category","string":"SomeClassCategory2"},{"type":"class","string":"SomeClass2"},{"type":"constructor","string":""},{"type":"param","types":["String"],"name":"param","description":"a parameter"},{"type":"optional","string":""},{"type":"example","string":""}],"description":{"full":"<p>A Class description</p>\n\n<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass2.someClassMethod(x);\n</pre></div>","summary":"<p>A Class description</p>","body":"<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass2.someClassMethod(x);\n</pre></div>"},"isPrivate":false,"ignore":false,"code":"function SomeClass2(){","ctx":{"type":"function","name":"SomeClass2","string":"SomeClass2()"},"fileName":"./tests/fixtures/functionSomeClass.js"},{"tags":[{"type":"category","string":"SomeClassCategory2"},{"type":"method","string":"someClass2Method2"},{"type":"param","types":["Function"],"name":"methodParam","description":"some method param"},{"type":"param","types":["Function"],"name":"methodParam2","description":"some method param"},{"type":"return","types":["String"],"description":"A return value"},{"type":"chainable","string":""}],"description":{"full":"<p>SomeClass2Function</p>\n\n<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass2.someClassMethod(x);\n</pre></div>","summary":"<p>SomeClass2Function</p>","body":"<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass2.someClassMethod(x);\n</pre></div>"},"isPrivate":false,"ignore":false,"code":"self.someClassMethod2 = function(methodParam,methodParam2) {\n\t\tself.lib.Plugins.loadPlugin(self, pluginPath);\n\t\treturn self;\n\t};\n}","ctx":{"type":"method","receiver":"self","name":"someClassMethod2","string":"self.someClassMethod2()"},"fileName":"./tests/fixtures/functionSomeClass.js"}],"mox":[{"params":[{"types":["String"],"name":"param","description":"a parameter"}],"name":"SomeClass","type":"function","fileName":"./tests/fixtures/functionSomeClass.js","description":{"full":"<p>A Class description</p>\n\n<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass.someClassMethod(x);\n</pre></div>","summary":"<p>A Class description</p>","body":"<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass.someClassMethod(x);\n</pre></div>"},"author":"Tim Chaplin","category":"SomeClassCategory","class":"SomeClass","constructor":true,"optional":true,"example":true},{"params":[],"name":"aProperty","type":"declaration","fileName":"./tests/fixtures/functionSomeClass.js","description":{"full":"<p>Some property Thing</p>","summary":"<p>Some property Thing</p>","body":""}},{"params":[{"types":["Function","String"],"name":"methodParam","description":"some method param"}],"name":"someClassMethod","type":"method","fileName":"./tests/fixtures/functionSomeClass.js","description":{"full":"<p>SomeClassFunction</p>\n\n<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass.someClassMethod(x);\n</pre></div>","summary":"<p>SomeClassFunction</p>","body":"<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass.someClassMethod(x);\n</pre></div>"},"category":"SomeClassCategory","method":"someClassMethod","return":{"types":["Function","String"],"description":"A return value"},"chainable":true},{"params":[{"types":["String"],"name":"param","description":"a parameter"}],"name":"SomeClass2","type":"function","fileName":"./tests/fixtures/functionSomeClass.js","description":{"full":"<p>A Class description</p>\n\n<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass2.someClassMethod(x);\n</pre></div>","summary":"<p>A Class description</p>","body":"<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass2.someClassMethod(x);\n</pre></div>"},"category":"SomeClassCategory2","class":"SomeClass2","constructor":true,"optional":true,"example":true},{"params":[{"types":["Function"],"name":"methodParam","description":"some method param"},{"types":["Function"],"name":"methodParam2","description":"some method param"}],"name":"someClassMethod2","type":"method","fileName":"./tests/fixtures/functionSomeClass.js","description":{"full":"<p>SomeClass2Function</p>\n\n<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass2.someClassMethod(x);\n</pre></div>","summary":"<p>SomeClass2Function</p>","body":"<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass2.someClassMethod(x);\n</pre></div>"},"category":"SomeClassCategory2","method":"someClass2Method2","return":{"types":["String"],"description":"A return value"},"chainable":true}],"categories":[{"tag":"SomeClassCategory","moxComments":[{"params":[{"types":["String"],"name":"param","description":"a parameter"}],"name":"SomeClass","type":"function","fileName":"./tests/fixtures/functionSomeClass.js","description":{"full":"<p>A Class description</p>\n\n<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass.someClassMethod(x);\n</pre></div>","summary":"<p>A Class description</p>","body":"<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass.someClassMethod(x);\n</pre></div>"},"author":"Tim Chaplin","category":"SomeClassCategory","class":"SomeClass","constructor":true,"optional":true,"example":true},{"params":[{"types":["Function","String"],"name":"methodParam","description":"some method param"}],"name":"someClassMethod","type":"method","fileName":"./tests/fixtures/functionSomeClass.js","description":{"full":"<p>SomeClassFunction</p>\n\n<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass.someClassMethod(x);\n</pre></div>","summary":"<p>SomeClassFunction</p>","body":"<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass.someClassMethod(x);\n</pre></div>"},"category":"SomeClassCategory","method":"someClassMethod","return":{"types":["Function","String"],"description":"A return value"},"chainable":true}]},{"tag":"SomeClassCategory2","moxComments":[{"params":[{"types":["String"],"name":"param","description":"a parameter"}],"name":"SomeClass2","type":"function","fileName":"./tests/fixtures/functionSomeClass.js","description":{"full":"<p>A Class description</p>\n\n<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass2.someClassMethod(x);\n</pre></div>","summary":"<p>A Class description</p>","body":"<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass2.someClassMethod(x);\n</pre></div>"},"category":"SomeClassCategory2","class":"SomeClass2","constructor":true,"optional":true,"example":true},{"params":[{"types":["Function"],"name":"methodParam","description":"some method param"},{"types":["Function"],"name":"methodParam2","description":"some method param"}],"name":"someClassMethod2","type":"method","fileName":"./tests/fixtures/functionSomeClass.js","description":{"full":"<p>SomeClass2Function</p>\n\n<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass2.someClassMethod(x);\n</pre></div>","summary":"<p>SomeClass2Function</p>","body":"<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass2.someClassMethod(x);\n</pre></div>"},"category":"SomeClassCategory2","method":"someClass2Method2","return":{"types":["String"],"description":"A return value"},"chainable":true}]}],"files":[{"tag":"./tests/fixtures/functionSomeClass.js","moxComments":[{"params":[{"types":["String"],"name":"param","description":"a parameter"}],"name":"SomeClass","type":"function","fileName":"./tests/fixtures/functionSomeClass.js","description":{"full":"<p>A Class description</p>\n\n<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass.someClassMethod(x);\n</pre></div>","summary":"<p>A Class description</p>","body":"<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass.someClassMethod(x);\n</pre></div>"},"author":"Tim Chaplin","category":"SomeClassCategory","class":"SomeClass","constructor":true,"optional":true,"example":true},{"params":[],"name":"aProperty","type":"declaration","fileName":"./tests/fixtures/functionSomeClass.js","description":{"full":"<p>Some property Thing</p>","summary":"<p>Some property Thing</p>","body":""}},{"params":[{"types":["Function","String"],"name":"methodParam","description":"some method param"}],"name":"someClassMethod","type":"method","fileName":"./tests/fixtures/functionSomeClass.js","description":{"full":"<p>SomeClassFunction</p>\n\n<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass.someClassMethod(x);\n</pre></div>","summary":"<p>SomeClassFunction</p>","body":"<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass.someClassMethod(x);\n</pre></div>"},"category":"SomeClassCategory","method":"someClassMethod","return":{"types":["Function","String"],"description":"A return value"},"chainable":true},{"params":[{"types":["String"],"name":"param","description":"a parameter"}],"name":"SomeClass2","type":"function","fileName":"./tests/fixtures/functionSomeClass.js","description":{"full":"<p>A Class description</p>\n\n<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass2.someClassMethod(x);\n</pre></div>","summary":"<p>A Class description</p>","body":"<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass2.someClassMethod(x);\n</pre></div>"},"category":"SomeClassCategory2","class":"SomeClass2","constructor":true,"optional":true,"example":true},{"params":[{"types":["Function"],"name":"methodParam","description":"some method param"},{"types":["Function"],"name":"methodParam2","description":"some method param"}],"name":"someClassMethod2","type":"method","fileName":"./tests/fixtures/functionSomeClass.js","description":{"full":"<p>SomeClass2Function</p>\n\n<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass2.someClassMethod(x);\n</pre></div>","summary":"<p>SomeClass2Function</p>","body":"<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass2.someClassMethod(x);\n</pre></div>"},"category":"SomeClassCategory2","method":"someClass2Method2","return":{"types":["String"],"description":"A return value"},"chainable":true}]}]}
+{
+    "comments": [
+        {
+            "tags": [
+                {
+                    "type": "author",
+                    "string": "Tim Chaplin"
+                },
+                {
+                    "type": "category",
+                    "string": "SomeClassCategory"
+                },
+                {
+                    "type": "class",
+                    "string": "SomeClass"
+                },
+                {
+                    "type": "constructor",
+                    "string": ""
+                },
+                {
+                    "type": "param",
+                    "types": [
+                        "String"
+                    ],
+                    "name": "param",
+                    "description": "a parameter"
+                },
+                {
+                    "type": "optional",
+                    "string": ""
+                },
+                {
+                    "type": "example",
+                    "string": ""
+                }
+            ],
+            "description": {
+                "full": "<p>A Class description</p>\n\n<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass.someClassMethod(x);\n</pre></div>",
+                "summary": "<p>A Class description</p>",
+                "body": "<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass.someClassMethod(x);\n</pre></div>"
+            },
+            "isPrivate": false,
+            "ignore": false,
+            "code": "function SomeClass(){",
+            "ctx": {
+                "type": "function",
+                "name": "SomeClass",
+                "string": "SomeClass()"
+            },
+            "fileName": "./tests/fixtures/functionSomeClass.js"
+        },
+        {
+            "tags": [
+                {
+                    "type": "category",
+                    "string": "SomeClassCategory"
+                }
+            ],
+            "description": {
+                "full": "<p>Some property description</p>",
+                "summary": "<p>Some property description</p>",
+                "body": ""
+            },
+            "isPrivate": false,
+            "ignore": false,
+            "code": "var aProperty = \"alsdkfjaslfdj\";",
+            "ctx": {
+                "type": "declaration",
+                "name": "aProperty",
+                "value": "\"alsdkfjaslfdj\"",
+                "string": "aProperty"
+            },
+            "fileName": "./tests/fixtures/functionSomeClass.js"
+        },
+        {
+            "tags": [
+                {
+                    "type": "category",
+                    "string": "SomeClassCategory"
+                },
+                {
+                    "type": "type",
+                    "types": [
+                        "String"
+                    ]
+                }
+            ],
+            "description": {
+                "full": "<p>Some property with type description</p>",
+                "summary": "<p>Some property with type description</p>",
+                "body": ""
+            },
+            "isPrivate": false,
+            "ignore": false,
+            "code": "var aPropertyWithType = \"alsdkfjaslfdj\";",
+            "ctx": {
+                "type": "declaration",
+                "name": "aPropertyWithType",
+                "value": "\"alsdkfjaslfdj\"",
+                "string": "aPropertyWithType"
+            },
+            "fileName": "./tests/fixtures/functionSomeClass.js"
+        },
+        {
+            "tags": [
+                {
+                    "type": "category",
+                    "string": "SomeClassCategory"
+                },
+                {
+                    "type": "method",
+                    "string": "someClassMethod"
+                },
+                {
+                    "type": "param",
+                    "types": [
+                        "Function",
+                        "String"
+                    ],
+                    "name": "methodParam",
+                    "description": "some method param"
+                },
+                {
+                    "type": "return",
+                    "types": [
+                        "Function",
+                        "String"
+                    ],
+                    "description": "A return value"
+                },
+                {
+                    "type": "chainable",
+                    "string": ""
+                }
+            ],
+            "description": {
+                "full": "<p>SomeClassFunction</p>\n\n<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass.someClassMethod(x);\n</pre></div>",
+                "summary": "<p>SomeClassFunction</p>",
+                "body": "<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass.someClassMethod(x);\n</pre></div>"
+            },
+            "isPrivate": false,
+            "ignore": false,
+            "code": "self.someClassMethod = function(methodParam) {\n\t\tself.lib.Plugins.loadPlugin(self, pluginPath);\n\t\treturn self;\n\t};\n}",
+            "ctx": {
+                "type": "method",
+                "receiver": "self",
+                "name": "someClassMethod",
+                "string": "self.someClassMethod()"
+            },
+            "fileName": "./tests/fixtures/functionSomeClass.js"
+        },
+        {
+            "tags": [
+                {
+                    "type": "category",
+                    "string": "SomeClassCategory2"
+                },
+                {
+                    "type": "class",
+                    "string": "SomeClass2"
+                },
+                {
+                    "type": "constructor",
+                    "string": ""
+                },
+                {
+                    "type": "param",
+                    "types": [
+                        "String"
+                    ],
+                    "name": "param",
+                    "description": "a parameter"
+                },
+                {
+                    "type": "optional",
+                    "string": ""
+                },
+                {
+                    "type": "example",
+                    "string": ""
+                }
+            ],
+            "description": {
+                "full": "<p>A Class description</p>\n\n<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass2.someClassMethod(x);\n</pre></div>",
+                "summary": "<p>A Class description</p>",
+                "body": "<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass2.someClassMethod(x);\n</pre></div>"
+            },
+            "isPrivate": false,
+            "ignore": false,
+            "code": "function SomeClass2(){",
+            "ctx": {
+                "type": "function",
+                "name": "SomeClass2",
+                "string": "SomeClass2()"
+            },
+            "fileName": "./tests/fixtures/functionSomeClass.js"
+        },
+        {
+            "tags": [
+                {
+                    "type": "category",
+                    "string": "SomeClassCategory2"
+                },
+                {
+                    "type": "method",
+                    "string": "someClass2Method2"
+                },
+                {
+                    "type": "param",
+                    "types": [
+                        "Function"
+                    ],
+                    "name": "methodParam",
+                    "description": "some method param"
+                },
+                {
+                    "type": "param",
+                    "types": [
+                        "Function"
+                    ],
+                    "name": "methodParam2",
+                    "description": "some method param"
+                },
+                {
+                    "type": "return",
+                    "types": [
+                        "String"
+                    ],
+                    "description": "A return value"
+                },
+                {
+                    "type": "chainable",
+                    "string": ""
+                }
+            ],
+            "description": {
+                "full": "<p>SomeClass2Function</p>\n\n<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass2.someClassMethod(x);\n</pre></div>",
+                "summary": "<p>SomeClass2Function</p>",
+                "body": "<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass2.someClassMethod(x);\n</pre></div>"
+            },
+            "isPrivate": false,
+            "ignore": false,
+            "code": "self.someClassMethod2 = function(methodParam,methodParam2) {\n\t\tself.lib.Plugins.loadPlugin(self, pluginPath);\n\t\treturn self;\n\t};\n}",
+            "ctx": {
+                "type": "method",
+                "receiver": "self",
+                "name": "someClassMethod2",
+                "string": "self.someClassMethod2()"
+            },
+            "fileName": "./tests/fixtures/functionSomeClass.js"
+        }
+    ],
+    "mox": [
+        {
+            "params": [
+                {
+                    "types": [
+                        "String"
+                    ],
+                    "name": "param",
+                    "description": "a parameter"
+                }
+            ],
+            "name": "SomeClass",
+            "type": "function",
+            "fileName": "./tests/fixtures/functionSomeClass.js",
+            "description": {
+                "full": "<p>A Class description</p>\n\n<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass.someClassMethod(x);\n</pre></div>",
+                "summary": "<p>A Class description</p>",
+                "body": "<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass.someClassMethod(x);\n</pre></div>"
+            },
+            "author": "Tim Chaplin",
+            "category": "SomeClassCategory",
+            "class": "SomeClass",
+            "constructor": true,
+            "optional": true,
+            "example": true
+        },
+        {
+            "params": [],
+            "name": "aProperty",
+            "type": "declaration",
+            "fileName": "./tests/fixtures/functionSomeClass.js",
+            "description": {
+                "full": "<p>Some property description</p>",
+                "summary": "<p>Some property description</p>",
+                "body": ""
+            },
+            "category": "SomeClassCategory"
+        },
+        {
+            "params": [],
+            "name": "aPropertyWithType",
+            "type": {
+                "types": [
+                    "String"
+                ]
+            },
+            "fileName": "./tests/fixtures/functionSomeClass.js",
+            "description": {
+                "full": "<p>Some property with type description</p>",
+                "summary": "<p>Some property with type description</p>",
+                "body": ""
+            },
+            "category": "SomeClassCategory"
+        },
+        {
+            "params": [
+                {
+                    "types": [
+                        "Function",
+                        "String"
+                    ],
+                    "name": "methodParam",
+                    "description": "some method param"
+                }
+            ],
+            "name": "someClassMethod",
+            "type": "method",
+            "fileName": "./tests/fixtures/functionSomeClass.js",
+            "description": {
+                "full": "<p>SomeClassFunction</p>\n\n<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass.someClassMethod(x);\n</pre></div>",
+                "summary": "<p>SomeClassFunction</p>",
+                "body": "<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass.someClassMethod(x);\n</pre></div>"
+            },
+            "category": "SomeClassCategory",
+            "method": "someClassMethod",
+            "return": {
+                "types": [
+                    "Function",
+                    "String"
+                ],
+                "description": "A return value"
+            },
+            "chainable": true
+        },
+        {
+            "params": [
+                {
+                    "types": [
+                        "String"
+                    ],
+                    "name": "param",
+                    "description": "a parameter"
+                }
+            ],
+            "name": "SomeClass2",
+            "type": "function",
+            "fileName": "./tests/fixtures/functionSomeClass.js",
+            "description": {
+                "full": "<p>A Class description</p>\n\n<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass2.someClassMethod(x);\n</pre></div>",
+                "summary": "<p>A Class description</p>",
+                "body": "<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass2.someClassMethod(x);\n</pre></div>"
+            },
+            "category": "SomeClassCategory2",
+            "class": "SomeClass2",
+            "constructor": true,
+            "optional": true,
+            "example": true
+        },
+        {
+            "params": [
+                {
+                    "types": [
+                        "Function"
+                    ],
+                    "name": "methodParam",
+                    "description": "some method param"
+                },
+                {
+                    "types": [
+                        "Function"
+                    ],
+                    "name": "methodParam2",
+                    "description": "some method param"
+                }
+            ],
+            "name": "someClassMethod2",
+            "type": "method",
+            "fileName": "./tests/fixtures/functionSomeClass.js",
+            "description": {
+                "full": "<p>SomeClass2Function</p>\n\n<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass2.someClassMethod(x);\n</pre></div>",
+                "summary": "<p>SomeClass2Function</p>",
+                "body": "<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass2.someClassMethod(x);\n</pre></div>"
+            },
+            "category": "SomeClassCategory2",
+            "method": "someClass2Method2",
+            "return": {
+                "types": [
+                    "String"
+                ],
+                "description": "A return value"
+            },
+            "chainable": true
+        }
+    ],
+    "categories": [
+        {
+            "tag": "SomeClassCategory",
+            "moxComments": [
+                {
+                    "params": [
+                        {
+                            "types": [
+                                "String"
+                            ],
+                            "name": "param",
+                            "description": "a parameter"
+                        }
+                    ],
+                    "name": "SomeClass",
+                    "type": "function",
+                    "fileName": "./tests/fixtures/functionSomeClass.js",
+                    "description": {
+                        "full": "<p>A Class description</p>\n\n<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass.someClassMethod(x);\n</pre></div>",
+                        "summary": "<p>A Class description</p>",
+                        "body": "<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass.someClassMethod(x);\n</pre></div>"
+                    },
+                    "author": "Tim Chaplin",
+                    "category": "SomeClassCategory",
+                    "class": "SomeClass",
+                    "constructor": true,
+                    "optional": true,
+                    "example": true
+                },
+                {
+                    "params": [],
+                    "name": "aProperty",
+                    "type": "declaration",
+                    "fileName": "./tests/fixtures/functionSomeClass.js",
+                    "description": {
+                        "full": "<p>Some property description</p>",
+                        "summary": "<p>Some property description</p>",
+                        "body": ""
+                    },
+                    "category": "SomeClassCategory"
+                },
+                {
+                    "params": [],
+                    "name": "aPropertyWithType",
+                    "type": {
+                        "types": [
+                            "String"
+                        ]
+                    },
+                    "fileName": "./tests/fixtures/functionSomeClass.js",
+                    "description": {
+                        "full": "<p>Some property with type description</p>",
+                        "summary": "<p>Some property with type description</p>",
+                        "body": ""
+                    },
+                    "category": "SomeClassCategory"
+                },
+                {
+                    "params": [
+                        {
+                            "types": [
+                                "Function",
+                                "String"
+                            ],
+                            "name": "methodParam",
+                            "description": "some method param"
+                        }
+                    ],
+                    "name": "someClassMethod",
+                    "type": "method",
+                    "fileName": "./tests/fixtures/functionSomeClass.js",
+                    "description": {
+                        "full": "<p>SomeClassFunction</p>\n\n<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass.someClassMethod(x);\n</pre></div>",
+                        "summary": "<p>SomeClassFunction</p>",
+                        "body": "<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass.someClassMethod(x);\n</pre></div>"
+                    },
+                    "category": "SomeClassCategory",
+                    "method": "someClassMethod",
+                    "return": {
+                        "types": [
+                            "Function",
+                            "String"
+                        ],
+                        "description": "A return value"
+                    },
+                    "chainable": true
+                }
+            ]
+        },
+        {
+            "tag": "SomeClassCategory2",
+            "moxComments": [
+                {
+                    "params": [
+                        {
+                            "types": [
+                                "String"
+                            ],
+                            "name": "param",
+                            "description": "a parameter"
+                        }
+                    ],
+                    "name": "SomeClass2",
+                    "type": "function",
+                    "fileName": "./tests/fixtures/functionSomeClass.js",
+                    "description": {
+                        "full": "<p>A Class description</p>\n\n<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass2.someClassMethod(x);\n</pre></div>",
+                        "summary": "<p>A Class description</p>",
+                        "body": "<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass2.someClassMethod(x);\n</pre></div>"
+                    },
+                    "category": "SomeClassCategory2",
+                    "class": "SomeClass2",
+                    "constructor": true,
+                    "optional": true,
+                    "example": true
+                },
+                {
+                    "params": [
+                        {
+                            "types": [
+                                "Function"
+                            ],
+                            "name": "methodParam",
+                            "description": "some method param"
+                        },
+                        {
+                            "types": [
+                                "Function"
+                            ],
+                            "name": "methodParam2",
+                            "description": "some method param"
+                        }
+                    ],
+                    "name": "someClassMethod2",
+                    "type": "method",
+                    "fileName": "./tests/fixtures/functionSomeClass.js",
+                    "description": {
+                        "full": "<p>SomeClass2Function</p>\n\n<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass2.someClassMethod(x);\n</pre></div>",
+                        "summary": "<p>SomeClass2Function</p>",
+                        "body": "<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass2.someClassMethod(x);\n</pre></div>"
+                    },
+                    "category": "SomeClassCategory2",
+                    "method": "someClass2Method2",
+                    "return": {
+                        "types": [
+                            "String"
+                        ],
+                        "description": "A return value"
+                    },
+                    "chainable": true
+                }
+            ]
+        }
+    ],
+    "files": [
+        {
+            "tag": "./tests/fixtures/functionSomeClass.js",
+            "moxComments": [
+                {
+                    "params": [
+                        {
+                            "types": [
+                                "String"
+                            ],
+                            "name": "param",
+                            "description": "a parameter"
+                        }
+                    ],
+                    "name": "SomeClass",
+                    "type": "function",
+                    "fileName": "./tests/fixtures/functionSomeClass.js",
+                    "description": {
+                        "full": "<p>A Class description</p>\n\n<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass.someClassMethod(x);\n</pre></div>",
+                        "summary": "<p>A Class description</p>",
+                        "body": "<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass.someClassMethod(x);\n</pre></div>"
+                    },
+                    "author": "Tim Chaplin",
+                    "category": "SomeClassCategory",
+                    "class": "SomeClass",
+                    "constructor": true,
+                    "optional": true,
+                    "example": true
+                },
+                {
+                    "params": [],
+                    "name": "aProperty",
+                    "type": "declaration",
+                    "fileName": "./tests/fixtures/functionSomeClass.js",
+                    "description": {
+                        "full": "<p>Some property description</p>",
+                        "summary": "<p>Some property description</p>",
+                        "body": ""
+                    },
+                    "category": "SomeClassCategory"
+                },
+                {
+                    "params": [],
+                    "name": "aPropertyWithType",
+                    "type": {
+                        "types": [
+                            "String"
+                        ]
+                    },
+                    "fileName": "./tests/fixtures/functionSomeClass.js",
+                    "description": {
+                        "full": "<p>Some property with type description</p>",
+                        "summary": "<p>Some property with type description</p>",
+                        "body": ""
+                    },
+                    "category": "SomeClassCategory"
+                },
+                {
+                    "params": [
+                        {
+                            "types": [
+                                "Function",
+                                "String"
+                            ],
+                            "name": "methodParam",
+                            "description": "some method param"
+                        }
+                    ],
+                    "name": "someClassMethod",
+                    "type": "method",
+                    "fileName": "./tests/fixtures/functionSomeClass.js",
+                    "description": {
+                        "full": "<p>SomeClassFunction</p>\n\n<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass.someClassMethod(x);\n</pre></div>",
+                        "summary": "<p>SomeClassFunction</p>",
+                        "body": "<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass.someClassMethod(x);\n</pre></div>"
+                    },
+                    "category": "SomeClassCategory",
+                    "method": "someClassMethod",
+                    "return": {
+                        "types": [
+                            "Function",
+                            "String"
+                        ],
+                        "description": "A return value"
+                    },
+                    "chainable": true
+                },
+                {
+                    "params": [
+                        {
+                            "types": [
+                                "String"
+                            ],
+                            "name": "param",
+                            "description": "a parameter"
+                        }
+                    ],
+                    "name": "SomeClass2",
+                    "type": "function",
+                    "fileName": "./tests/fixtures/functionSomeClass.js",
+                    "description": {
+                        "full": "<p>A Class description</p>\n\n<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass2.someClassMethod(x);\n</pre></div>",
+                        "summary": "<p>A Class description</p>",
+                        "body": "<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass2.someClassMethod(x);\n</pre></div>"
+                    },
+                    "category": "SomeClassCategory2",
+                    "class": "SomeClass2",
+                    "constructor": true,
+                    "optional": true,
+                    "example": true
+                },
+                {
+                    "params": [
+                        {
+                            "types": [
+                                "Function"
+                            ],
+                            "name": "methodParam",
+                            "description": "some method param"
+                        },
+                        {
+                            "types": [
+                                "Function"
+                            ],
+                            "name": "methodParam2",
+                            "description": "some method param"
+                        }
+                    ],
+                    "name": "someClassMethod2",
+                    "type": "method",
+                    "fileName": "./tests/fixtures/functionSomeClass.js",
+                    "description": {
+                        "full": "<p>SomeClass2Function</p>\n\n<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass2.someClassMethod(x);\n</pre></div>",
+                        "summary": "<p>SomeClass2Function</p>",
+                        "body": "<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass2.someClassMethod(x);\n</pre></div>"
+                    },
+                    "category": "SomeClassCategory2",
+                    "method": "someClass2Method2",
+                    "return": {
+                        "types": [
+                            "String"
+                        ],
+                        "description": "A return value"
+                    },
+                    "chainable": true
+                }
+            ]
+        }
+    ]
+}

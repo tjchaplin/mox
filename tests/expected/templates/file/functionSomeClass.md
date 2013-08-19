@@ -2,9 +2,10 @@
 
 * [SomeClass][0]
 * [aProperty][1]
-* [someClassMethod][2]
-* [SomeClass2][3]
-* [someClassMethod2][4]
+* [aPropertyWithType][2]
+* [someClassMethod][3]
+* [SomeClass2][4]
+* [someClassMethod2][5]
 
 ## ./tests/fixtures/functionSomeClass.js
 
@@ -21,7 +22,15 @@ Example:
 
 ## aProperty
 
-#### Arguments
+Some property description
+
+## aPropertyWithType
+
+#### Types
+
+  * String
+
+Some property with type description
 
 ## someClassMethod
 
@@ -68,6 +77,7 @@ Example:
 
 [0]: #someclass
 [1]: #aproperty
-[2]: #someclassmethod
-[3]: #someclass2
-[4]: #someclassmethod2
+[2]: #apropertywithtype
+[3]: #someclassmethod
+[4]: #someclass2
+[5]: #someclassmethod2

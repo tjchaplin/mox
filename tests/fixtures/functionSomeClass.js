@@ -16,8 +16,18 @@
  * @example
  */
 function SomeClass(){
-	/** Some property Thing */
+	/** 
+	 * Some property description
+	 * @category SomeClassCategory
+	 */
 	var aProperty = "alsdkfjaslfdj";
+
+	/** 
+	 * Some property with type description
+	 * @category SomeClassCategory
+	 * @type {String}
+	 */
+	var aPropertyWithType = "alsdkfjaslfdj";
 
 	/**
 	 * SomeClassFunction

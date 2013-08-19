@@ -1,12 +1,14 @@
 ## SomeClassCategory
 
 * [SomeClass][0]
-* [someClassMethod][1]
+* [aProperty][1]
+* [aPropertyWithType][2]
+* [someClassMethod][3]
 
 ## SomeClassCategory2
 
-* [SomeClass2][2]
-* [someClassMethod2][3]
+* [SomeClass2][4]
+* [someClassMethod2][5]
 
 ## SomeClassCategory
 
@@ -20,6 +22,18 @@ Example:
 #### Arguments
 
 1. param (String) - a parameter
+
+### aProperty
+
+Some property description
+
+### aPropertyWithType
+
+#### Types
+
+  * String
+
+Some property with type description
 
 ### someClassMethod
 
@@ -67,6 +81,8 @@ Example:
 
 
 [0]: #someclass
-[1]: #someclassmethod
-[2]: #someclass2
-[3]: #someclassmethod2
+[1]: #aproperty
+[2]: #apropertywithtype
+[3]: #someclassmethod
+[4]: #someclass2
+[5]: #someclassmethod2

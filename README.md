@@ -51,7 +51,10 @@ All below options are available to mox
 
 ```javascript
 var allMoxOptions = {
-	
+	name : "someProjectName", //-> name of the project or application being documented
+
+	version : "aVersion", //-> documentation or project version number
+
 	moxFile : "mox object json output file",
 
 	htmlFile : "htmlFile" //-> html generated output file path,
@@ -311,7 +314,7 @@ Generates mox object:
 
 ```javascript
 /** Some property Thing */
-var aProperty = "alsdkfjaslfdj";
+var aProperty = "someProperty";
 ```
 
 Generates mox object:
@@ -331,6 +334,37 @@ Generates mox object:
 	} 
    }
 ]
+```
+
+####Given Property with type
+
+```javascript
+/** 
+ * Some property with type description
+ * @type {String}
+ */
+var aPropertyWithType = "somePropertyWithType";
+```
+
+Generates mox object:
+
+```javascript
+{
+    "params": [],
+    "name": "aPropertyWithType",
+    "type": {
+        "types": [
+            "String"
+        ]
+    },
+    "fileName": "./tests/fixtures/functionSomeClass.js",
+    "description": {
+        "full": "<p>Some property with type description</p>",
+        "summary": "<p>Some property with type description</p>",
+        "body": ""
+    },
+    "category": "SomeClassCategory"
+}
 ```
 
 ##Credits/Other Frameworks

@@ -1,6 +1,11 @@
 doctype 5
 html
 	body
+		if name
+			h1= name
+				if version
+					span  - 
+					span= version
 		each file in files
 			h2= file.tag
 			ul
@@ -11,21 +16,31 @@ html
 			h2= file.tag
 			each comment in file.moxComments
 				h2= comment.name
-				p!= comment.description.body
-				h4 Arguments
-				ol
-					each param in comment.params
-						li= param.name
-							span  (
-							each type, index in param.types
-								if index > 0
-									span  | 
-									span= type
-								else
-									span= type
-							span )
-							span  - 
-							span=  param.description
+				if comment.type.types
+					h4 Types
+					ul
+					each type, index in comment.type.types
+						li= type
+				if comment.description.body
+					p!= comment.description.body
+				else
+					p!= comment.description.full
+				#comment.params
+					if comment.params.length > 0 
+						h4 Arguments
+						ol
+							each param in comment.params
+								li= param.name
+									span  (
+									each type, index in param.types
+										if index > 0
+											span  | 
+											span= type
+										else
+											span= type
+									span )
+									span  - 
+									span=  param.description
 				#comment.return
 					if comment.return
 						h4 Returns

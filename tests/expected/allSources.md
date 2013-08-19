@@ -68,8 +68,15 @@ Example:
 
 ### aProperty
 
-Some property Thing
+Some property description
 
+### aPropertyWithType
+
+#### Types
+
+  * String
+
+Some property with type description
 
 
 [0]: #someclass
