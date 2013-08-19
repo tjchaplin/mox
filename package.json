@@ -1,7 +1,7 @@
 {
   "name": "mox",
   "description": "A documentation to markdown creator",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "author": "Tim Chaplin <tim.chaplin@ticktockdevelopment.com>",
   "repository": {
     "type": "git",
