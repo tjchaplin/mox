@@ -12,7 +12,7 @@ html
 			each comment in mox
 				if comment.type === 'method' || comment.type === 'function'
 					li
-						a(href="##{comment.name.toLowerCase().replace(' ',"_")}")
+						a(href="##{comment.name.toLowerCase().replace(/ /g,"-")}")
 							code= comment.name
 		h2 
 			code Declarations
@@ -20,7 +20,7 @@ html
 			each comment in mox
 				if comment.type === 'declaration'
 					li
-						a(href="##{comment.name.toLowerCase().replace(' ',"_")}")
+						a(href="##{comment.name.toLowerCase().replace(/ /g,"-")}")
 							code= comment.name
 		h2 
 			code Methods
@@ -30,7 +30,7 @@ html
 					code= comment.name
 				p
 					//Current comment
-					a(href='##{comment.name.toLowerCase().replace(' ',"_")}') #
+					a(href='##{comment.name.toLowerCase().replace(/ /g,"-")}') #
 					span  
 
 					//file table of  contents
@@ -80,7 +80,7 @@ html
 				h3= comment.name
 				p
 					//Current comment
-					a(href='##{comment.name.toLowerCase().replace(' ',"_")}') #
+					a(href='##{comment.name.toLowerCase().replace(/ /g,"-")}') #
 					span  
 
 					//file table of  contents
