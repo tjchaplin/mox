@@ -12,7 +12,7 @@ html
 			ul
 				each comment in category.moxComments
 					li
-						a(href="##{comment.name.toLowerCase()}")
+						a(href="##{comment.name.toLowerCase().replace(/ /g,"_")}")
 							code= comment.name
 		each category in categories
 			h2
@@ -22,11 +22,11 @@ html
 					code= comment.name
 				p
 					//Current comment
-					a(href='##{comment.name.toLowerCase()}') #
+					a(href='##{comment.name.toLowerCase().replace(/ /g,"_")}') #
 					span  
 
 					//Category table of  contents
-					a(href="##{category.tag.toLowerCase()}")  &#x24C9;
+					a(href="##{category.tag.toLowerCase().replace(/ /g,"_")}")  &#x24C9;
 
 				if comment.type.types
 					h4 Types
