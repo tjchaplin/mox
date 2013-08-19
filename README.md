@@ -27,6 +27,12 @@ Mox templates use [jade](http://jade-lang.com/) as the templating engine.  To cr
 npm install mox
 ```
 
+## Example output
+
+See the examples directory for ouput using the predefined mox templates:
+
+['examples'](https://github.com/tjchaplin/mox/tree/master/doc/)
+
 ## How to use
 
 ### Default Template
