@@ -46,5 +46,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks("grunt-contrib-jshint");
 
   grunt.registerTask("deploy", ["release"]);
-  grunt.registerTask("default", ["jshint","mochaTest"]);
+  grunt.registerTask("test", ["jshint","mochaTest"]);
+  grunt.registerTask("default", ["jshint","mochaTest","watch"]);
 };
