@@ -1,4 +1,4 @@
-doctype 5
+doctype html
 html
 	body
 		if name
@@ -12,7 +12,7 @@ html
 			ul
 				each comment in file.moxComments
 					li
-						a(href="##{comment.name.toLowerCase().replace(/ /g,"-")}")
+						a(href='##{comment.name.toLowerCase().replace(/ /g,"-")}')
 							code= comment.name
 		each file in files
 			h2
@@ -26,7 +26,7 @@ html
 					span  
 
 					//file table of  contents
-					a(href="##{file.tag.toLowerCase().replace(/ /g,"-")}")  &#x24C9;
+					a(href='##{file.tag.toLowerCase().replace(/ /g,"-")}')  &#x24C9;
 
 				if comment.type.types
 					h4 Types

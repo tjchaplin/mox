@@ -1,4 +1,4 @@
-doctype 5
+doctype html
 html
 	body
 		if name
@@ -12,7 +12,7 @@ html
 			each comment in mox
 				if comment.type === 'method' || comment.type === 'function'
 					li
-						a(href="##{comment.name.toLowerCase().replace(/ /g,"-")}")
+						a(href='##{comment.name.toLowerCase().replace(/ /g,"-")}')
 							code= comment.name
 		h2 
 			code Declarations
@@ -20,7 +20,7 @@ html
 			each comment in mox
 				if comment.type === 'declaration'
 					li
-						a(href="##{comment.name.toLowerCase().replace(/ /g,"-")}")
+						a(href='##{comment.name.toLowerCase().replace(/ /g,"-")}')
 							code= comment.name
 		h2 
 			code Methods
@@ -34,7 +34,7 @@ html
 					span  
 
 					//file table of  contents
-					a(href="#methods")  &#x24C9;
+					a(href='#methods')  &#x24C9;
 
 				p!= comment.description.body
 				#comment.params
@@ -59,8 +59,8 @@ html
 				#comment.return
 					if comment.return
 						h4 Returns
-						br
-						br	
+						<br/>
+						<br/>
 						em 
 							span  (
 							each type, index in comment.return.types
@@ -84,7 +84,7 @@ html
 					span  
 
 					//file table of  contents
-					a(href="#declarations")  &#x24C9;
+					a(href='#declarations')  &#x24C9;
 				p 
 					if comment.type.types
 						h4 Types
