@@ -15,7 +15,9 @@
     "dox": "~0.4.4",
     "jade": "~1.1.5",
     "html-md": "3.0.2",
-    "node-dir": "~0.1.5"
+    "node-dir": "~0.1.5",
+    "hammerdown": "0.0.16",
+    "concat-stream": "~1.4.4"
   },
   "devDependencies": {
     "mocha": "~1.17.1",
