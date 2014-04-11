@@ -4,28 +4,29 @@ html
 		if name
 			h1= name
 				if version
-					span  -
+					span  - 
 					span= version
 		each file in files
-			h6
-				a(href="##{file.tag.toLowerCase().split('/').pop().replace(/ /g,"-").replace(/\./g,"-")}")
-					= file.tag.toLowerCase().split('/').pop()
+			h2
+				code= file.tag
 			ul
 				each comment in file.moxComments
 					li
-						a(href="##{comment.name.toLowerCase().replace(/ /g,"-")}")
+						a(href='##{comment.name.toLowerCase().replace(/ /g,"-")}')
 							code= comment.name
 		each file in files
-			h2= file.tag.toLowerCase().split('/').pop()
+			h2
+				code= file.tag
 			each comment in file.moxComments
-				h3= comment.name
+				h3
+					code= comment.name
 				p
 					//Current comment
 					a(href='##{comment.name.toLowerCase().replace(/ /g,"-")}') #
-					span
+					span  
 
 					//file table of  contents
-					a(href="##{file.tag.toLowerCase().split('/').pop().replace(/ /g,"-").replace(/\./g,"-")}")  &#x24C9;
+					a(href='##{file.tag.toLowerCase().replace(/ /g,"-")}')  &#x24C9;
 
 				if comment.type.types
 					h4 Types
@@ -33,25 +34,28 @@ html
 					each type, index in comment.type.types
 						li
 							em= type
-				p!= comment.description.full
+				if comment.description.body
+					p!= comment.description.body
+				else
+					p!= comment.description.full
 				#comment.params
-					if comment.params.length > 0
+					if comment.params.length > 0 
 						h4 Arguments
 						ol
 							each param in comment.params
 								li
 									code= param.name
-									span
-									em
+									span  
+									em 
 										span  (
 										each type, index in param.types
 											if index > 0
-												span  |
+												span  | 
 												span= type
 											else
 												span= type
 										span )
-										span  -
+										span  - 
 										span=  param.description
 				#comment.return
 					if comment.return
@@ -62,11 +66,11 @@ html
 							span  (
 							each type, index in comment.return.types
 									if index > 0
-										span  |
+										span  | 
 										span= type
 									else
 										span= type
 							span )
-						span  -
+						span  - 
 						span= comment.return.description
 				hr

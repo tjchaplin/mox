@@ -1,20 +1,17 @@
-###### [functionsomeclass.js][0]
+## `./tests/fixtures/functionSomeClass.js`
 
 * [`SomeClass`][0]
-* [`aProperty`][0]
-* [`aPropertyWithType`][0]
-* [`someClassMethod`][0]
-* [`SomeClass2`][0]
-* [`someClassMethod2`][0]
+* [`aProperty`][1]
+* [`aPropertyWithType`][2]
+* [`someClassMethod`][3]
+* [`SomeClass2`][4]
+* [`someClassMethod2`][5]
 
-## functionsomeclass.js
+## `./tests/fixtures/functionSomeClass.js`
 
-### SomeClass
+### `SomeClass`
 
-[\#][1]
-[Ⓣ][0]
-
-A Class description
+[\#][0] [Ⓣ][6]
 
 Example:
 
@@ -23,23 +20,21 @@ Example:
 
 #### Arguments
 
-1. `param`_(String) -a parameter_
+1. `param` _(String) - a parameter_
 
 ---
 
-### aProperty
+### `aProperty`
 
-[\#][2]
-[Ⓣ][0]
+[\#][1] [Ⓣ][6]
 
 Some property description
 
 ---
 
-### aPropertyWithType
+### `aPropertyWithType`
 
-[\#][3]
-[Ⓣ][0]
+[\#][2] [Ⓣ][6]
 
 #### Types
 
@@ -49,12 +44,9 @@ Some property with type description
 
 ---
 
-### someClassMethod
+### `someClassMethod`
 
-[\#][4]
-[Ⓣ][0]
-
-SomeClassFunction
+[\#][3] [Ⓣ][6]
 
 Example:
 
@@ -63,20 +55,17 @@ Example:
 
 #### Arguments
 
-1. `methodParam`_(Function |String) -some method param_
+1. `methodParam` _(Function | String) - some method param_
 
 #### Returns  
   
-_(Function |String)_ -A return value
+_(Function | String)_ - A return value
 
 ---
 
-### SomeClass2
+### `SomeClass2`
 
-[\#][5]
-[Ⓣ][0]
-
-A Class description
+[\#][4] [Ⓣ][6]
 
 Example:
 
@@ -85,16 +74,13 @@ Example:
 
 #### Arguments
 
-1. `param`_(String) -a parameter_
+1. `param` _(String) - a parameter_
 
 ---
 
-### someClassMethod2
+### `someClassMethod2`
 
-[\#][6]
-[Ⓣ][0]
-
-SomeClass2Function
+[\#][5] [Ⓣ][6]
 
 Example:
 
@@ -103,21 +89,21 @@ Example:
 
 #### Arguments
 
-1. `methodParam`_(Function) -some method param_
-2. `methodParam2`_(Function) -some method param_
+1. `methodParam` _(Function) - some method param_
+2. `methodParam2` _(Function) - some method param_
 
 #### Returns  
   
-_(String)_ -A return value
+_(String)_ - A return value
 
 ---
 
 
 
-[0]: NaN
-[1]: #someclass
-[2]: #aproperty
-[3]: #apropertywithtype
-[4]: #someclassmethod
-[5]: #someclass2
-[6]: #someclassmethod2
+[0]: #someclass
+[1]: #aproperty
+[2]: #apropertywithtype
+[3]: #someclassmethod
+[4]: #someclass2
+[5]: #someclassmethod2
+[6]: #./tests/fixtures/functionsomeclass.js
