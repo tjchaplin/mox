@@ -5,6 +5,17 @@ A markdown javascript documentation generator
 
 [![Build Status](https://travis-ci.org/tjchaplin/mox.png)](https://travis-ci.org/tjchaplin/mox)
 
+### Get Going
+
+```javascript
+var mox = require("../lib/mox");
+
+var source = "./source1.js";
+
+mox.run(source1).pipe(process.stdout)
+=> //outputs markdown data
+```
+
 ##Purpose
 
 This project allows extended flexiblity in generating markdown documentation for javascript projects.  The advantage of this project over others is:
@@ -38,17 +49,16 @@ See the examples directory for ouput using the predefined mox templates:
 ### Default Template
 
 ```javascript
+var fs = require("fs");
 var mox = require("../lib/mox");
 
 var source1 = "./source1.js";
-var source2 = "./source2.js";
-var markdownDocumentationFile = "./someOutputfile.md";
+var fileWriteStream = fs.createWriteStream("./someOutputfile.md")
 
-mox.run([source1,source2], //->source files to generate documentation for
-		function(markdownDocument){
-			//->markdownDocument equal markdown contents
-		}); 
-=> //markdown documentation file will be created to output directory
+
+mox.run([source1]).pipe(fileWriteStream);
+
+=> //markdown documentation file will be generated to output directory
 ```
 
 ### Options
@@ -71,56 +81,59 @@ var allMoxOptions = {
 }
 ```
 
-### Default Template with outputfile
+### Default Template With Multiple Sources
 
 ```javascript
+var fs = require("fs");
 var mox = require("../lib/mox");
 
 var source1 = "./source1.js";
 var source2 = "./source2.js";
-var options = {
-	outputFile :"./someOutputfile.md" //->output markdown file
-};
+var fileWriteStream = fs.createWriteStream("./someOutputfile.md")
 
-mox.run([source1,source2], //->source files to generate documentation for
-		options); 
-=> //markdown documentation file will be created to output directory
+
+mox.run([source1,source2]).pipe(fileWriteStream);
+
+=> //markdown documentation file will be generated to output directory
 ```
 
 ### Categroy Template
 
 ```javascript
+var fs = require("fs");
 var mox = require("../lib/mox");
 
 var source1 = "./source1.js";
-var source2 = "./source2.js";
+var fileWriteStream = fs.createWriteStream("./someOutputfile.md")
 
-var options = {
-	outputFile :"./someOutputfile.md", //->output markdown file
-	template:"category" //->specfies to use the category based template.  Table of contents will be based on **@categoy** tag
-};
-
-mox.run([source1,source2], //->source files to generate documentation for
-		options); 
-=> //markdown documentation file will be created to output directory
+mox.run(source1,{template:"category"}).pipe(fileWriteStream);
+=> //markdown documentation file will be generated to output directory
 ```
 
 ### File Template
 
 ```javascript
+var fs = require("fs");
 var mox = require("../lib/mox");
 
 var source1 = "./source1.js";
-var source2 = "./source2.js";
+var fileWriteStream = fs.createWriteStream("./someOutputfile.md")
 
-var options = {
-	outputFile :"./someOutputfile.md", //->output markdown file
-	template:"file" //->specfies to use the file based template.  Table of contents will be based on filenames of the sources
-};
+mox.run(source1,{template:"file"}).pipe(fileWriteStream);
+=> //markdown documentation file will be generated to output directory
+```
 
-mox.run([source1,source2], //->source files to generate documentation for
-		options); 
-=> //markdown documentation file will be created to output directory
+### Default Template with Github Flavored Markdown(gfm)
+
+```javascript
+var fs = require("fs");
+var mox = require("../lib/mox");
+
+var source1 = "./source1.js";
+var fileWriteStream = fs.createWriteStream("./someOutputfile.md")
+
+mox.run(source1,{markdown:"gfm"}).pipe(fileWriteStream);
+=> //markdown documentation file will be generated through file stream
 ```
 
 ### Custom Template
@@ -146,20 +159,31 @@ html
 Here is how to use the custom template in mox
 
 ```javascript
+var fs = require("fs");
+var mox = require("../lib/mox");
+
+var source1 = "./source1.js";
+var fileWriteStream = fs.createWriteStream("./someOutputfile.md")
+
+mox.run(source1, //->source files to generate documentation for
+		{template:'./customTemplate.jade'}) //->specfies path to custom template
+		.pipe(fileWriteStream); 
+=> //markdown documentation file will be created to file stream
+```
+
+### Default Template with outputfile
+
+```javascript
 var mox = require("../lib/mox");
 
 var source1 = "./source1.js";
 var source2 = "./source2.js";
-
 var options = {
-	outputFile :"./someOutputfile.md", //->output markdown file
-	template:'./customTemplate.jade' //->specfies path to custom template
+	outputFile :"./someOutputfile.md" //->output markdown file
 };
 
-var customTemplate = './customTemplate.jade';
-
 mox.run([source1,source2], //->source files to generate documentation for
-		options); //->specfies path to custom template
+		options); 
 => //markdown documentation file will be created to output directory
 ```
 

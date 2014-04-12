@@ -23,8 +23,7 @@ html
 				p
 					//Current comment
 					a(href='##{comment.name.toLowerCase().replace(/ /g,"-")}') #
-					span  
-
+					span  | 
 					//file table of  contents
 					a(href='##{file.tag.toLowerCase().replace(/ /g,"-")}') &#x24C9;
 
@@ -45,25 +44,24 @@ html
 							each param in comment.params
 								li
 									code= param.name
-									span  
-									em 
-										span  (
-										each type, index in param.types
-											if index > 0
-												span  | 
-												span= type
-											else
-												span= type
+									span  (
+										em
+											each type, index in param.types
+												if index > 0
+													span  | 
+													span= type
+												else
+													span= type
 										span )
-										span  - 
-										span=  param.description
+									span  - 
+									span=  param.description
 				#comment.return
 					if comment.return
 						h4 Returns
 						br
 						br
 						em
-							span  (
+							span (
 							each type, index in comment.return.types
 									if index > 0
 										span  | 

@@ -31,10 +31,9 @@ html
 				p
 					//Current comment
 					a(href='##{comment.name.toLowerCase().replace(/ /g,"-")}') #
-					span  
-
+					span  | 
 					//file table of  contents
-					a(href='#methods')  &#x24C9;
+					a(href='#methods') &#x24C9;
 
 				p!= comment.description.body
 				#comment.params
@@ -44,15 +43,14 @@ html
 							each param in comment.params
 								li
 									code= param.name
-									span  
-									em 
-										span  (
-										each type, index in param.types
-											if index > 0
-												span  | 
-												span= type
-											else
-												span= type
+									span  (
+										em
+											each type, index in param.types
+												if index > 0
+													span  | 
+													span= type
+												else
+													span= type
 										span )
 									span  - 
 									span=  param.description
@@ -61,15 +59,15 @@ html
 						h4 Returns
 						<br/>
 						<br/>
-						em 
-							span  (
-							each type, index in comment.return.types
-									if index > 0
-										span  | 
-										span= type
-									else
-										span= type
-							span )
+						span (
+							em 
+								each type, index in comment.return.types
+										if index > 0
+											span  | 
+											span= type
+										else
+											span= type
+						span )
 						span  - 
 						span= comment.return.description
 				hr
@@ -81,10 +79,9 @@ html
 				p
 					//Current comment
 					a(href='##{comment.name.toLowerCase().replace(/ /g,"-")}') #
-					span  
-
+					span  | 
 					//file table of  contents
-					a(href='#declarations')  &#x24C9;
+					a(href='#declarations') &#x24C9;
 				p 
 					if comment.type.types
 						h4 Types

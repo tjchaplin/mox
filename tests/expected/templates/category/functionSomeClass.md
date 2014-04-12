@@ -1,12 +1,10 @@
 ## `SomeClassCategory`
-
 * [`SomeClass`][0]
 * [`aProperty`][1]
 * [`aPropertyWithType`][2]
 * [`someClassMethod`][3]
 
 ## `SomeClassCategory2`
-
 * [`SomeClass2`][4]
 * [`someClassMethod2`][5]
 
@@ -14,95 +12,107 @@
 
 ### `SomeClass`
 
-[\#][0] [Ⓣ][6]
+[\#][0] | [Ⓣ][6]
+
+
 
 Example:
 
     SomeClass.someClassMethod(x);
-    
 
 #### Arguments
-
-1. `param` _(String)_ - a parameter
+1. `param` (*String*) - a parameter
 
 ---
 
+
+
 ### `aProperty`
 
-[\#][1] [Ⓣ][6]
+[\#][1] | [Ⓣ][6]
+
+
 
 Some property description
 
 ---
 
+
+
 ### `aPropertyWithType`
 
-[\#][2] [Ⓣ][6]
+[\#][2] | [Ⓣ][6]
 
 #### Types
 
-  * _String_
+
+
 
 Some property with type description
 
 ---
 
+
+
 ### `someClassMethod`
 
-[\#][3] [Ⓣ][6]
+[\#][3] | [Ⓣ][6]
+
+
 
 Example:
 
     SomeClass.someClassMethod(x);
-    
 
 #### Arguments
-
-1. `methodParam` _(Function | String)_ - some method param
+1. `methodParam` (*Function | String*) - some method param
 
 #### Returns  
   
-_(Function | String)_ - A return value
+*(Function | String)* - A return value
 
 ---
+
+
 
 ## `SomeClassCategory2`
 
 ### `SomeClass2`
 
-[\#][4] [Ⓣ][7]
+[\#][4] | [Ⓣ][7]
+
+
 
 Example:
 
     SomeClass2.someClassMethod(x);
-    
 
 #### Arguments
-
-1. `param` _(String)_ - a parameter
+1. `param` (*String*) - a parameter
 
 ---
+
+
 
 ### `someClassMethod2`
 
-[\#][5] [Ⓣ][7]
+[\#][5] | [Ⓣ][7]
+
+
 
 Example:
 
     SomeClass2.someClassMethod(x);
-    
 
 #### Arguments
-
-1. `methodParam` _(Function)_ - some method param
-2. `methodParam2` _(Function)_ - some method param
+1. `methodParam` (*Function*) - some method param
+2. `methodParam2` (*Function*) - some method param
 
 #### Returns  
   
-_(String)_ - A return value
+*(String)* - A return value
 
 ---
-
 
 
 [0]: #someclass
