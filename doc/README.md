@@ -26,12 +26,10 @@ Template that groups by the file passed into mox.  Example here:
 var mox = require("../lib/mox");
 
 var source1 = "./source1.js";
-var source2 = "./source2.js";
 
-var options = {
-	outputFile :"./someOutputfile.md", //->output markdown file
-	template:"category" //->specfies to use the category based template.  Table of contents will be based on **@categoy** tag
-};
+//->specfies to use the category based template.  Table of contents will be based on **@categoy** tag
+mox.run(source1,{template:"category"})
+	.pipe(process.stdout);
 ```
 
 ##Code being documented in example templates:

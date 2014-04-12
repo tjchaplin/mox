@@ -1,5 +1,4 @@
 ## `./tests/fixtures/functionSomeClass.js`
-
 * [`SomeClass`][0]
 * [`aProperty`][1]
 * [`aPropertyWithType`][2]
@@ -11,93 +10,105 @@
 
 ### `SomeClass`
 
-[\#][0] [Ⓣ][6]
+[\#][0] | [Ⓣ][6]
+
+
 
 Example:
 
     SomeClass.someClassMethod(x);
-    
 
 #### Arguments
-
-1. `param` _(String) - a parameter_
+1. `param` (*String*) - a parameter
 
 ---
 
+
+
 ### `aProperty`
 
-[\#][1] [Ⓣ][6]
+[\#][1] | [Ⓣ][6]
+
+
 
 Some property description
 
 ---
 
+
+
 ### `aPropertyWithType`
 
-[\#][2] [Ⓣ][6]
+[\#][2] | [Ⓣ][6]
 
 #### Types
 
-  * _String_
+
+
 
 Some property with type description
 
 ---
 
+
+
 ### `someClassMethod`
 
-[\#][3] [Ⓣ][6]
+[\#][3] | [Ⓣ][6]
+
+
 
 Example:
 
     SomeClass.someClassMethod(x);
-    
 
 #### Arguments
-
-1. `methodParam` _(Function | String) - some method param_
+1. `methodParam` (*Function | String*) - some method param
 
 #### Returns  
   
-_(Function | String)_ - A return value
+*(Function | String)* - A return value
 
 ---
+
+
 
 ### `SomeClass2`
 
-[\#][4] [Ⓣ][6]
+[\#][4] | [Ⓣ][6]
+
+
 
 Example:
 
     SomeClass2.someClassMethod(x);
-    
 
 #### Arguments
-
-1. `param` _(String) - a parameter_
+1. `param` (*String*) - a parameter
 
 ---
+
+
 
 ### `someClassMethod2`
 
-[\#][5] [Ⓣ][6]
+[\#][5] | [Ⓣ][6]
+
+
 
 Example:
 
     SomeClass2.someClassMethod(x);
-    
 
 #### Arguments
-
-1. `methodParam` _(Function) - some method param_
-2. `methodParam2` _(Function) - some method param_
+1. `methodParam` (*Function*) - some method param
+2. `methodParam2` (*Function*) - some method param
 
 #### Returns  
   
-_(String)_ - A return value
+*(String)* - A return value
 
 ---
-
 
 
 [0]: #someclass
