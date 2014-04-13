@@ -227,6 +227,14 @@ describe("Given we are running mox", function() {
 
 			assert(exceptionThrown);
 		});
+		describe("When calback defined", function() {
+			it("Then should throw an error in callback", function(done) {
+				mox.run(null,function(error) {
+					assert(true);
+					done()
+				});
+			});
+		});
 	});
 
 	describe("When no destination defined", function() {
@@ -241,6 +249,14 @@ describe("Given we are running mox", function() {
 			}
 
 			assert(exceptionThrown);
+		});
+		describe("When calback defined", function() {
+			it("Then should throw an error in callback", function(done) {
+				mox.run('someFile.js',function(error) {
+					assert(true);
+					done()
+				});
+			});
 		});
 	});
 });

@@ -204,7 +204,7 @@ var options = {
 
 mox.run([source1,source2], //->source files to generate documentation for
 		options, //-> Mox options
-		function(markdownDocumentation){}); //->markdownDocumentation equals the markdown file contents
+		function(error,markdownDocumentation){}); //->markdownDocumentation equals the markdown file contents
 => //markdown documentation file will be created to output directory
 ```
 
