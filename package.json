@@ -1,7 +1,7 @@
 {
   "name": "mox",
   "description": "A documentation to markdown creator",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "author": "Tim Chaplin <tim.chaplin@ticktockdevelopment.com>",
   "repository": {
     "type": "git",
@@ -9,12 +9,10 @@
   },
   "homepage": "https://github.com/tjchaplin/mox.git",
   "dependencies": {
-    "markdown": "~0.5.0",
     "yaenumerable": "~1.0.1",
     "fs.extra": "~1.2.1",
     "dox": "~0.4.4",
     "jade": "~1.1.5",
-    "html-md": "3.0.2",
     "node-dir": "~0.1.5",
     "hammerdown": "0.0.18",
     "concat-stream": "~1.4.4",
