@@ -8,7 +8,7 @@ A markdown javascript documentation generator
 ### Get Going
 
 ```javascript
-var mox = require("../lib/mox");
+var mox = require("mox");
 
 var source = "./source1.js";
 
@@ -402,7 +402,7 @@ Generates mox object:
 Thanks to the following frameworks used as dependcies for the project
 * [dox](https://github.com/visionmedia/dox) - For getting jsdoc style documention object
 * [Jade](http://jade-lang.com/ )- For templating
-* [html.md](http://neocotic.com/html.md/) - For html to markdown
+* [hammerdown](https://github.com/tjchaplin/hammerdown) - Streaming HTML to markdown
 
 Other markdown javascript documentation projects
 * [Markdox](http://cbou.github.io/markdox/)

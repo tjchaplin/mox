@@ -30,7 +30,7 @@ var forEachNonDefaultTemplate = function(onTemplate){
 var streamAssertion = function (source,options,expectedFile,done) {
 	mox.run(source,options).pipe(concat(function(generatedMarkdown) {
 		generatedMarkdown = generatedMarkdown.toString().replace(/\r\n/g,'\n').replace(/\r/g,'');
-		var expected = fs.readFileSync(expectedFile, 'utf8').replace(/\r\n/g,'\n').replace(/\r/g,'');;
+		var expected = fs.readFileSync(expectedFile, 'utf8').replace(/\r\n/g,'\n').replace(/\r/g,'');
 		assert(expected == generatedMarkdown,"Expected File("+expectedFile+")"+" Doesn't match result file("+options.outputFile+") for("+source+")");					
 		done();							
 	}));
@@ -232,7 +232,7 @@ describe("Given we are running mox", function() {
 			it("Then should throw an error in callback", function(done) {
 				mox.run(null,function(error) {
 					assert(true);
-					done()
+					done();
 				});
 			});
 		});
@@ -255,7 +255,7 @@ describe("Given we are running mox", function() {
 			it("Then should throw an error in callback", function(done) {
 				mox.run('someFile.js',function(error) {
 					assert(true);
-					done()
+					done();
 				});
 			});
 		});

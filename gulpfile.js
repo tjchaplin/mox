@@ -13,10 +13,16 @@ gulp.task('lint', function() {
   gulp.src(['./lib/**/*.js',
             './tests/**/*.js'])
     .pipe(jshint())
-    .pipe(jshint.reporter('default'));
+    .pipe(jshint.reporter('default'))
+    .pipe(jshint.reporter('fail'));
 });
 
-gulp.task('test',function(){
+gulp.task('test',['lint'],function(){
+    gulp.src(['tests/**/*.js'])
+        .pipe(mocha({ reporter: 'spec' }));
+});
+
+gulp.task('test:local',['lint'],function(){
     gulp.src(['tests/**/*.js'])
         .pipe(mocha({ reporter: 'spec' }))
         .on('error', gutil.log);
