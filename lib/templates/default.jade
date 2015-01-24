@@ -10,7 +10,7 @@ html
 			code Methods
 		ul
 			each comment in mox
-				if comment.type === 'method' || comment.type === 'function'
+				if comment.type === 'method' || comment.type === 'function' || comment.type === 'constructor'
 					li
 						a(href='##{comment.name.toLowerCase().replace(/ /g,"-")}')
 							code= comment.name
@@ -25,7 +25,7 @@ html
 		h2 
 			code Methods
 		each comment in mox
-			if comment.type === 'method' || comment.type === 'function'
+			if comment.type === 'method' || comment.type === 'function'  || comment.type === 'constructor'
 				h3
 					code= comment.name
 				p
@@ -74,7 +74,7 @@ html
 		h2 
 			code Declarations
 		each comment in mox						
-			if comment.type !== 'method' && comment.type !== 'function'
+			if comment.type !== 'method' && comment.type !== 'function'  && comment.type !== 'constructor'
 				h3= comment.name
 				p
 					//Current comment

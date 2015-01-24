@@ -24,7 +24,8 @@
                         "String"
                     ],
                     "name": "param",
-                    "description": "a parameter"
+                    "description": "a parameter",
+                    "optional": false
                 },
                 {
                     "type": "optional",
@@ -36,15 +37,19 @@
                 }
             ],
             "description": {
-                "full": "<p>A Class description</p>\n\n<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass.someClassMethod(x);\n</pre></div>",
+                "full": "<p>A Class description</p><p>Example:</p><pre><code class=\"lang-javascript\">SomeClass.someClassMethod(x);\n</code></pre>\n",
                 "summary": "<p>A Class description</p>",
-                "body": "<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass.someClassMethod(x);\n</pre></div>"
+                "body": "<p>Example:</p><pre><code class=\"lang-javascript\">SomeClass.someClassMethod(x);\n</code></pre>\n"
             },
             "isPrivate": false,
+            "isConstructor": true,
+            "isEvent": false,
             "ignore": false,
+            "line": 1,
+            "codeStart": 18,
             "code": "function SomeClass(){",
             "ctx": {
-                "type": "function",
+                "type": "constructor",
                 "name": "SomeClass",
                 "string": "SomeClass()"
             },
@@ -63,7 +68,11 @@
                 "body": ""
             },
             "isPrivate": false,
+            "isConstructor": false,
+            "isEvent": false,
             "ignore": false,
+            "line": 19,
+            "codeStart": 23,
             "code": "var aProperty = \"alsdkfjaslfdj\";",
             "ctx": {
                 "type": "declaration",
@@ -92,7 +101,11 @@
                 "body": ""
             },
             "isPrivate": false,
+            "isConstructor": false,
+            "isEvent": false,
             "ignore": false,
+            "line": 25,
+            "codeStart": 30,
             "code": "var aPropertyWithType = \"alsdkfjaslfdj\";",
             "ctx": {
                 "type": "declaration",
@@ -119,7 +132,8 @@
                         "String"
                     ],
                     "name": "methodParam",
-                    "description": "some method param"
+                    "description": "some method param",
+                    "optional": false
                 },
                 {
                     "type": "return",
@@ -135,13 +149,17 @@
                 }
             ],
             "description": {
-                "full": "<p>SomeClassFunction</p>\n\n<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass.someClassMethod(x);\n</pre></div>",
+                "full": "<p>SomeClassFunction</p><p>Example:</p><pre><code class=\"lang-javascript\">SomeClass.someClassMethod(x);\n</code></pre>\n",
                 "summary": "<p>SomeClassFunction</p>",
-                "body": "<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass.someClassMethod(x);\n</pre></div>"
+                "body": "<p>Example:</p><pre><code class=\"lang-javascript\">SomeClass.someClassMethod(x);\n</code></pre>\n"
             },
             "isPrivate": false,
+            "isConstructor": false,
+            "isEvent": false,
             "ignore": false,
-            "code": "self.someClassMethod = function(methodParam) {\n\t\tself.lib.Plugins.loadPlugin(self, pluginPath);\n\t\treturn self;\n\t};\n}",
+            "line": 32,
+            "codeStart": 46,
+            "code": "self.someClassMethod = function(methodParam) {\n\tself.lib.Plugins.loadPlugin(self, pluginPath);\n\treturn self;\n};\n}",
             "ctx": {
                 "type": "method",
                 "receiver": "self",
@@ -170,7 +188,8 @@
                         "String"
                     ],
                     "name": "param",
-                    "description": "a parameter"
+                    "description": "a parameter",
+                    "optional": false
                 },
                 {
                     "type": "optional",
@@ -182,15 +201,19 @@
                 }
             ],
             "description": {
-                "full": "<p>A Class description</p>\n\n<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass2.someClassMethod(x);\n</pre></div>",
+                "full": "<p>A Class description</p><p>Example:</p><pre><code class=\"lang-javascript\">SomeClass2.someClassMethod(x);\n</code></pre>\n",
                 "summary": "<p>A Class description</p>",
-                "body": "<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass2.someClassMethod(x);\n</pre></div>"
+                "body": "<p>Example:</p><pre><code class=\"lang-javascript\">SomeClass2.someClassMethod(x);\n</code></pre>\n"
             },
             "isPrivate": false,
+            "isConstructor": true,
+            "isEvent": false,
             "ignore": false,
+            "line": 53,
+            "codeStart": 69,
             "code": "function SomeClass2(){",
             "ctx": {
-                "type": "function",
+                "type": "constructor",
                 "name": "SomeClass2",
                 "string": "SomeClass2()"
             },
@@ -212,7 +235,8 @@
                         "Function"
                     ],
                     "name": "methodParam",
-                    "description": "some method param"
+                    "description": "some method param",
+                    "optional": false
                 },
                 {
                     "type": "param",
@@ -220,7 +244,8 @@
                         "Function"
                     ],
                     "name": "methodParam2",
-                    "description": "some method param"
+                    "description": "some method param",
+                    "optional": false
                 },
                 {
                     "type": "return",
@@ -235,13 +260,17 @@
                 }
             ],
             "description": {
-                "full": "<p>SomeClass2Function</p>\n\n<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass2.someClassMethod(x);\n</pre></div>",
+                "full": "<p>SomeClass2Function</p><p>Example:</p><pre><code class=\"lang-javascript\">SomeClass2.someClassMethod(x);\n</code></pre>\n",
                 "summary": "<p>SomeClass2Function</p>",
-                "body": "<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass2.someClassMethod(x);\n</pre></div>"
+                "body": "<p>Example:</p><pre><code class=\"lang-javascript\">SomeClass2.someClassMethod(x);\n</code></pre>\n"
             },
             "isPrivate": false,
+            "isConstructor": false,
+            "isEvent": false,
             "ignore": false,
-            "code": "self.someClassMethod2 = function(methodParam,methodParam2) {\n\t\tself.lib.Plugins.loadPlugin(self, pluginPath);\n\t\treturn self;\n\t};\n}",
+            "line": 71,
+            "codeStart": 87,
+            "code": "self.someClassMethod2 = function(methodParam,methodParam2) {\n\tself.lib.Plugins.loadPlugin(self, pluginPath);\n\treturn self;\n};\n}",
             "ctx": {
                 "type": "method",
                 "receiver": "self",
@@ -259,16 +288,17 @@
                         "String"
                     ],
                     "name": "param",
-                    "description": "a parameter"
+                    "description": "a parameter",
+                    "optional": false
                 }
             ],
             "name": "SomeClass",
-            "type": "function",
+            "type": "constructor",
             "fileName": "./tests/fixtures/functionSomeClass.js",
             "description": {
-                "full": "<p>A Class description</p>\n\n<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass.someClassMethod(x);\n</pre></div>",
+                "full": "<p>A Class description</p><p>Example:</p><pre><code class=\"lang-javascript\">SomeClass.someClassMethod(x);\n</code></pre>\n",
                 "summary": "<p>A Class description</p>",
-                "body": "<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass.someClassMethod(x);\n</pre></div>"
+                "body": "<p>Example:</p><pre><code class=\"lang-javascript\">SomeClass.someClassMethod(x);\n</code></pre>\n"
             },
             "author": "Tim Chaplin",
             "category": "SomeClassCategory",
@@ -313,16 +343,17 @@
                         "String"
                     ],
                     "name": "methodParam",
-                    "description": "some method param"
+                    "description": "some method param",
+                    "optional": false
                 }
             ],
             "name": "someClassMethod",
             "type": "method",
             "fileName": "./tests/fixtures/functionSomeClass.js",
             "description": {
-                "full": "<p>SomeClassFunction</p>\n\n<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass.someClassMethod(x);\n</pre></div>",
+                "full": "<p>SomeClassFunction</p><p>Example:</p><pre><code class=\"lang-javascript\">SomeClass.someClassMethod(x);\n</code></pre>\n",
                 "summary": "<p>SomeClassFunction</p>",
-                "body": "<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass.someClassMethod(x);\n</pre></div>"
+                "body": "<p>Example:</p><pre><code class=\"lang-javascript\">SomeClass.someClassMethod(x);\n</code></pre>\n"
             },
             "category": "SomeClassCategory",
             "method": "someClassMethod",
@@ -342,16 +373,17 @@
                         "String"
                     ],
                     "name": "param",
-                    "description": "a parameter"
+                    "description": "a parameter",
+                    "optional": false
                 }
             ],
             "name": "SomeClass2",
-            "type": "function",
+            "type": "constructor",
             "fileName": "./tests/fixtures/functionSomeClass.js",
             "description": {
-                "full": "<p>A Class description</p>\n\n<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass2.someClassMethod(x);\n</pre></div>",
+                "full": "<p>A Class description</p><p>Example:</p><pre><code class=\"lang-javascript\">SomeClass2.someClassMethod(x);\n</code></pre>\n",
                 "summary": "<p>A Class description</p>",
-                "body": "<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass2.someClassMethod(x);\n</pre></div>"
+                "body": "<p>Example:</p><pre><code class=\"lang-javascript\">SomeClass2.someClassMethod(x);\n</code></pre>\n"
             },
             "category": "SomeClassCategory2",
             "class": "SomeClass2",
@@ -366,23 +398,25 @@
                         "Function"
                     ],
                     "name": "methodParam",
-                    "description": "some method param"
+                    "description": "some method param",
+                    "optional": false
                 },
                 {
                     "types": [
                         "Function"
                     ],
                     "name": "methodParam2",
-                    "description": "some method param"
+                    "description": "some method param",
+                    "optional": false
                 }
             ],
             "name": "someClassMethod2",
             "type": "method",
             "fileName": "./tests/fixtures/functionSomeClass.js",
             "description": {
-                "full": "<p>SomeClass2Function</p>\n\n<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass2.someClassMethod(x);\n</pre></div>",
+                "full": "<p>SomeClass2Function</p><p>Example:</p><pre><code class=\"lang-javascript\">SomeClass2.someClassMethod(x);\n</code></pre>\n",
                 "summary": "<p>SomeClass2Function</p>",
-                "body": "<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass2.someClassMethod(x);\n</pre></div>"
+                "body": "<p>Example:</p><pre><code class=\"lang-javascript\">SomeClass2.someClassMethod(x);\n</code></pre>\n"
             },
             "category": "SomeClassCategory2",
             "method": "someClass2Method2",
@@ -406,16 +440,17 @@
                                 "String"
                             ],
                             "name": "param",
-                            "description": "a parameter"
+                            "description": "a parameter",
+                            "optional": false
                         }
                     ],
                     "name": "SomeClass",
-                    "type": "function",
+                    "type": "constructor",
                     "fileName": "./tests/fixtures/functionSomeClass.js",
                     "description": {
-                        "full": "<p>A Class description</p>\n\n<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass.someClassMethod(x);\n</pre></div>",
+                        "full": "<p>A Class description</p><p>Example:</p><pre><code class=\"lang-javascript\">SomeClass.someClassMethod(x);\n</code></pre>\n",
                         "summary": "<p>A Class description</p>",
-                        "body": "<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass.someClassMethod(x);\n</pre></div>"
+                        "body": "<p>Example:</p><pre><code class=\"lang-javascript\">SomeClass.someClassMethod(x);\n</code></pre>\n"
                     },
                     "author": "Tim Chaplin",
                     "category": "SomeClassCategory",
@@ -460,16 +495,17 @@
                                 "String"
                             ],
                             "name": "methodParam",
-                            "description": "some method param"
+                            "description": "some method param",
+                            "optional": false
                         }
                     ],
                     "name": "someClassMethod",
                     "type": "method",
                     "fileName": "./tests/fixtures/functionSomeClass.js",
                     "description": {
-                        "full": "<p>SomeClassFunction</p>\n\n<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass.someClassMethod(x);\n</pre></div>",
+                        "full": "<p>SomeClassFunction</p><p>Example:</p><pre><code class=\"lang-javascript\">SomeClass.someClassMethod(x);\n</code></pre>\n",
                         "summary": "<p>SomeClassFunction</p>",
-                        "body": "<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass.someClassMethod(x);\n</pre></div>"
+                        "body": "<p>Example:</p><pre><code class=\"lang-javascript\">SomeClass.someClassMethod(x);\n</code></pre>\n"
                     },
                     "category": "SomeClassCategory",
                     "method": "someClassMethod",
@@ -494,16 +530,17 @@
                                 "String"
                             ],
                             "name": "param",
-                            "description": "a parameter"
+                            "description": "a parameter",
+                            "optional": false
                         }
                     ],
                     "name": "SomeClass2",
-                    "type": "function",
+                    "type": "constructor",
                     "fileName": "./tests/fixtures/functionSomeClass.js",
                     "description": {
-                        "full": "<p>A Class description</p>\n\n<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass2.someClassMethod(x);\n</pre></div>",
+                        "full": "<p>A Class description</p><p>Example:</p><pre><code class=\"lang-javascript\">SomeClass2.someClassMethod(x);\n</code></pre>\n",
                         "summary": "<p>A Class description</p>",
-                        "body": "<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass2.someClassMethod(x);\n</pre></div>"
+                        "body": "<p>Example:</p><pre><code class=\"lang-javascript\">SomeClass2.someClassMethod(x);\n</code></pre>\n"
                     },
                     "category": "SomeClassCategory2",
                     "class": "SomeClass2",
@@ -518,23 +555,25 @@
                                 "Function"
                             ],
                             "name": "methodParam",
-                            "description": "some method param"
+                            "description": "some method param",
+                            "optional": false
                         },
                         {
                             "types": [
                                 "Function"
                             ],
                             "name": "methodParam2",
-                            "description": "some method param"
+                            "description": "some method param",
+                            "optional": false
                         }
                     ],
                     "name": "someClassMethod2",
                     "type": "method",
                     "fileName": "./tests/fixtures/functionSomeClass.js",
                     "description": {
-                        "full": "<p>SomeClass2Function</p>\n\n<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass2.someClassMethod(x);\n</pre></div>",
+                        "full": "<p>SomeClass2Function</p><p>Example:</p><pre><code class=\"lang-javascript\">SomeClass2.someClassMethod(x);\n</code></pre>\n",
                         "summary": "<p>SomeClass2Function</p>",
-                        "body": "<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass2.someClassMethod(x);\n</pre></div>"
+                        "body": "<p>Example:</p><pre><code class=\"lang-javascript\">SomeClass2.someClassMethod(x);\n</code></pre>\n"
                     },
                     "category": "SomeClassCategory2",
                     "method": "someClass2Method2",
@@ -560,16 +599,17 @@
                                 "String"
                             ],
                             "name": "param",
-                            "description": "a parameter"
+                            "description": "a parameter",
+                            "optional": false
                         }
                     ],
                     "name": "SomeClass",
-                    "type": "function",
+                    "type": "constructor",
                     "fileName": "./tests/fixtures/functionSomeClass.js",
                     "description": {
-                        "full": "<p>A Class description</p>\n\n<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass.someClassMethod(x);\n</pre></div>",
+                        "full": "<p>A Class description</p><p>Example:</p><pre><code class=\"lang-javascript\">SomeClass.someClassMethod(x);\n</code></pre>\n",
                         "summary": "<p>A Class description</p>",
-                        "body": "<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass.someClassMethod(x);\n</pre></div>"
+                        "body": "<p>Example:</p><pre><code class=\"lang-javascript\">SomeClass.someClassMethod(x);\n</code></pre>\n"
                     },
                     "author": "Tim Chaplin",
                     "category": "SomeClassCategory",
@@ -614,16 +654,17 @@
                                 "String"
                             ],
                             "name": "methodParam",
-                            "description": "some method param"
+                            "description": "some method param",
+                            "optional": false
                         }
                     ],
                     "name": "someClassMethod",
                     "type": "method",
                     "fileName": "./tests/fixtures/functionSomeClass.js",
                     "description": {
-                        "full": "<p>SomeClassFunction</p>\n\n<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass.someClassMethod(x);\n</pre></div>",
+                        "full": "<p>SomeClassFunction</p><p>Example:</p><pre><code class=\"lang-javascript\">SomeClass.someClassMethod(x);\n</code></pre>\n",
                         "summary": "<p>SomeClassFunction</p>",
-                        "body": "<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass.someClassMethod(x);\n</pre></div>"
+                        "body": "<p>Example:</p><pre><code class=\"lang-javascript\">SomeClass.someClassMethod(x);\n</code></pre>\n"
                     },
                     "category": "SomeClassCategory",
                     "method": "someClassMethod",
@@ -643,16 +684,17 @@
                                 "String"
                             ],
                             "name": "param",
-                            "description": "a parameter"
+                            "description": "a parameter",
+                            "optional": false
                         }
                     ],
                     "name": "SomeClass2",
-                    "type": "function",
+                    "type": "constructor",
                     "fileName": "./tests/fixtures/functionSomeClass.js",
                     "description": {
-                        "full": "<p>A Class description</p>\n\n<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass2.someClassMethod(x);\n</pre></div>",
+                        "full": "<p>A Class description</p><p>Example:</p><pre><code class=\"lang-javascript\">SomeClass2.someClassMethod(x);\n</code></pre>\n",
                         "summary": "<p>A Class description</p>",
-                        "body": "<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass2.someClassMethod(x);\n</pre></div>"
+                        "body": "<p>Example:</p><pre><code class=\"lang-javascript\">SomeClass2.someClassMethod(x);\n</code></pre>\n"
                     },
                     "category": "SomeClassCategory2",
                     "class": "SomeClass2",
@@ -667,23 +709,25 @@
                                 "Function"
                             ],
                             "name": "methodParam",
-                            "description": "some method param"
+                            "description": "some method param",
+                            "optional": false
                         },
                         {
                             "types": [
                                 "Function"
                             ],
                             "name": "methodParam2",
-                            "description": "some method param"
+                            "description": "some method param",
+                            "optional": false
                         }
                     ],
                     "name": "someClassMethod2",
                     "type": "method",
                     "fileName": "./tests/fixtures/functionSomeClass.js",
                     "description": {
-                        "full": "<p>SomeClass2Function</p>\n\n<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass2.someClassMethod(x);\n</pre></div>",
+                        "full": "<p>SomeClass2Function</p><p>Example:</p><pre><code class=\"lang-javascript\">SomeClass2.someClassMethod(x);\n</code></pre>\n",
                         "summary": "<p>SomeClass2Function</p>",
-                        "body": "<p>Example:</p>\n\n<div class=\"highlight\"><pre lang=\"javascript\">SomeClass2.someClassMethod(x);\n</pre></div>"
+                        "body": "<p>Example:</p><pre><code class=\"lang-javascript\">SomeClass2.someClassMethod(x);\n</code></pre>\n"
                     },
                     "category": "SomeClassCategory2",
                     "method": "someClass2Method2",
