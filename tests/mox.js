@@ -29,7 +29,8 @@ var forEachNonDefaultTemplate = function(onTemplate){
 
 var streamAssertion = function (source,options,expectedFile,done) {
 	mox.run(source,options).pipe(concat(function(generatedMarkdown) {
-		var expected = fs.readFileSync(expectedFile, 'utf8');
+		generatedMarkdown = generatedMarkdown.toString().replace(/\r\n/g,'\n').replace(/\r/g,'');
+		var expected = fs.readFileSync(expectedFile, 'utf8').replace(/\r\n/g,'\n').replace(/\r/g,'');;
 		assert(expected == generatedMarkdown,"Expected File("+expectedFile+")"+" Doesn't match result file("+options.outputFile+") for("+source+")");					
 		done();							
 	}));
@@ -37,8 +38,8 @@ var streamAssertion = function (source,options,expectedFile,done) {
 
 var outputAssertion  = function (source,options,expectedFile,done) {
 	mox.run(source,options,function(){
-		var actual = fs.readFileSync(options.outputFile, 'ascii');
-		var expected = fs.readFileSync(expectedFile, 'ascii');
+		var actual = fs.readFileSync(options.outputFile, 'ascii').replace(/\r\n/g,'\n').replace(/\r/g,'');
+		var expected = fs.readFileSync(expectedFile, 'ascii').replace(/\r\n/g,'\n').replace(/\r/g,'');
 
 		assert(expected === actual,"Expected File("+expectedFile+")"+" Doesn't match result file("+options.outputFile+") for("+source+")");					
 		done();					
@@ -172,8 +173,8 @@ describe("Given we are generating documentation markdown", function() {
 					};
 
 					mox.run(source,options,function(){
-						var actual = fs.readFileSync(options.htmlFile, 'ascii');
-						var expected = fs.readFileSync(expectedFile, 'ascii');
+						var actual = fs.readFileSync(options.htmlFile, 'ascii').replace(/\r\n/g,'\n').replace(/\r/g,'');
+						var expected = fs.readFileSync(expectedFile, 'ascii').replace(/\r\n/g,'\n').replace(/\r/g,'');
 
 						assert(expected === actual,"Expected File("+expectedFile+")"+" Doesn't match result file("+options.htmlFile+") for("+source+")");					
 						done();					
@@ -196,8 +197,8 @@ describe("Given we are generating documentation markdown", function() {
 					};
 
 					mox.run(source,options,function(){
-						var actual = fs.readFileSync(options.moxFile, 'ascii');
-						var expected = fs.readFileSync(expectedFile, 'ascii');
+						var actual = fs.readFileSync(options.moxFile, 'ascii').replace(/\r\n/g,'\n').replace(/\r/g,'');
+						var expected = fs.readFileSync(expectedFile, 'ascii').replace(/\r\n/g,'\n').replace(/\r/g,'');
 
 						assert(expected === actual,"Expected File("+expectedFile+")"+" Doesn't match result file("+options.moxFile+") for("+source+")");					
 						done();					
