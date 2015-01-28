@@ -38,19 +38,13 @@ var streamAssertion = function (source,options,expectedFile,done) {
 };
 
 var outputAssertion  = function (source,options,expectedFile,done) {
-	var dd = domain.create();
-	dd.on('error',function(error){
-		console.log(error);
-	});
-	dd.run(function(){
-		mox(options,source).run(function(error,data){
-			var actual = fs.readFileSync(options.outputFile, 'ascii').replace(/\r\n/g,'\n').replace(/\r/g,'');
-			var expected = fs.readFileSync(expectedFile, 'ascii').replace(/\r\n/g,'\n').replace(/\r/g,'');
+	mox(options,source).run(function(error,data){
+		var actual = fs.readFileSync(options.outputFile, 'ascii').replace(/\r\n/g,'\n').replace(/\r/g,'');
+		var expected = fs.readFileSync(expectedFile, 'ascii').replace(/\r\n/g,'\n').replace(/\r/g,'');
 
-			assert(expected == actual,"Expected File("+expectedFile+")"+" Doesn't match result file("+options.outputFile+") for("+source+")");					
-			done();					
-		});
-	});	
+		assert(expected == actual,"Expected File("+expectedFile+")"+" Doesn't match result file("+options.outputFile+") for("+source+")");					
+		done();					
+	});
 };
 
 describe("Given we are generating documentation markdown", function() {
@@ -175,7 +169,7 @@ describe("Given we are generating documentation markdown", function() {
 						htmlFile : "./tests/tmp/"+testFixtureFileName+".html"
 					};
 
-					mox(options,source).run(function(error,data){
+					mox(options,source).run().on('end',function(){
 						var actual = fs.readFileSync(options.htmlFile, 'ascii').replace(/\r\n/g,'\n').replace(/\r/g,'');
 						var expected = fs.readFileSync(expectedFile, 'ascii').replace(/\r\n/g,'\n').replace(/\r/g,'');
 
