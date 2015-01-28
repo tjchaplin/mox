@@ -3,6 +3,7 @@ var path = require('path');
 var assert = require('assert');
 var mox = require("../lib/mox");
 var concat = require("concat-stream");
+var domain = require('domain');
 
 var forEachTestFixture = function(onTestFixture){
 	var testFiles = fs.readdirSync(__dirname+'/fixtures');
@@ -28,7 +29,7 @@ var forEachNonDefaultTemplate = function(onTemplate){
 };
 
 var streamAssertion = function (source,options,expectedFile,done) {
-	mox.run(source,options).pipe(concat(function(generatedMarkdown) {
+	mox(options,source).run().pipe(concat(function(generatedMarkdown) {
 		generatedMarkdown = generatedMarkdown.toString().replace(/\r\n/g,'\n').replace(/\r/g,'');
 		var expected = fs.readFileSync(expectedFile, 'utf8').replace(/\r\n/g,'\n').replace(/\r/g,'');
 		assert(expected == generatedMarkdown,"Expected File("+expectedFile+")"+" Doesn't match result file("+options.outputFile+") for("+source+")");					
@@ -37,13 +38,19 @@ var streamAssertion = function (source,options,expectedFile,done) {
 };
 
 var outputAssertion  = function (source,options,expectedFile,done) {
-	mox.run(source,options,function(){
-		var actual = fs.readFileSync(options.outputFile, 'ascii').replace(/\r\n/g,'\n').replace(/\r/g,'');
-		var expected = fs.readFileSync(expectedFile, 'ascii').replace(/\r\n/g,'\n').replace(/\r/g,'');
-
-		assert(expected === actual,"Expected File("+expectedFile+")"+" Doesn't match result file("+options.outputFile+") for("+source+")");					
-		done();					
+	var dd = domain.create();
+	dd.on('error',function(error){
+		console.log(error);
 	});
+	dd.run(function(){
+		mox(options,source).run(function(error,data){
+			var actual = fs.readFileSync(options.outputFile, 'ascii').replace(/\r\n/g,'\n').replace(/\r/g,'');
+			var expected = fs.readFileSync(expectedFile, 'ascii').replace(/\r\n/g,'\n').replace(/\r/g,'');
+
+			assert(expected == actual,"Expected File("+expectedFile+")"+" Doesn't match result file("+options.outputFile+") for("+source+")");					
+			done();					
+		});
+	});	
 };
 
 describe("Given we are generating documentation markdown", function() {
@@ -91,12 +98,8 @@ describe("Given we are generating documentation markdown", function() {
 
 				streamAssertion(source,options,expectedFile,done);
 			});
-
 		});
 	});
-
-
-
 
 	describe("when generating output files",function(){
 		describe("When using the default template", function() {
@@ -172,7 +175,7 @@ describe("Given we are generating documentation markdown", function() {
 						htmlFile : "./tests/tmp/"+testFixtureFileName+".html"
 					};
 
-					mox.run(source,options,function(){
+					mox(options,source).run(function(error,data){
 						var actual = fs.readFileSync(options.htmlFile, 'ascii').replace(/\r\n/g,'\n').replace(/\r/g,'');
 						var expected = fs.readFileSync(expectedFile, 'ascii').replace(/\r\n/g,'\n').replace(/\r/g,'');
 
@@ -196,7 +199,7 @@ describe("Given we are generating documentation markdown", function() {
 						moxFile : "./tests/tmp/"+testFixtureFileName+".json"
 					};
 
-					mox.run(source,options,function(){
+					mox(options,source).run().on('end',function(){
 						var actual = fs.readFileSync(options.moxFile, 'ascii').replace(/\r\n/g,'\n').replace(/\r/g,'');
 						var expected = fs.readFileSync(expectedFile, 'ascii').replace(/\r\n/g,'\n').replace(/\r/g,'');
 
@@ -221,7 +224,7 @@ describe("Given we are running mox", function() {
 			var exceptionThrown = false;
 
 			try{
-				mox.run();
+				mox().run();
 			}catch(exception){
 				exceptionThrown = true;
 			}
@@ -230,7 +233,7 @@ describe("Given we are running mox", function() {
 		});
 		describe("When calback defined", function() {
 			it("Then should throw an error in callback", function(done) {
-				mox.run(null,function(error) {
+				mox(null).run(function(error) {
 					assert(true);
 					done();
 				});
@@ -244,7 +247,7 @@ describe("Given we are running mox", function() {
 			var exceptionThrown = false;
 
 			try{
-				mox.run('someFile.js');
+				mox('someFile.js').run();
 			}catch(exception){
 				exceptionThrown = true;
 			}
@@ -253,7 +256,7 @@ describe("Given we are running mox", function() {
 		});
 		describe("When calback defined", function() {
 			it("Then should throw an error in callback", function(done) {
-				mox.run('someFile.js',function(error) {
+				mox('someFile.js').run(function(error) {
 					assert(true);
 					done();
 				});
